@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Skills Reference</title>
+<style>
+:root {
+  --bg:#0f1117; --surface:#181c27; --surface2:#1e2336; --border:#2a3050;
+  --text:#e2e8f0; --muted:#8896b3; --accent:#6366f1; --green:#10b981; --sky:#38bdf8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column}
+
+/* Header */
+.hdr{background:linear-gradient(135deg,#1e1b4b 0%,#1e2336 100%);border-bottom:1px solid var(--border);padding:1.5rem 2rem 1.2rem}
+.hdr h1{font-size:1.6rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.5rem}
+.hdr h1 a{margin-left:auto;font-size:.8rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(99,102,241,.4);border-radius:8px;padding:.3rem .7rem}
+.hdr h1 a:hover{background:rgba(99,102,241,.15)}
+.hdr p{color:var(--muted);margin-top:.3rem;font-size:.9rem}
+.stats{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
+.stat{background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:8px;padding:.3rem .7rem;font-size:.78rem;color:var(--accent);font-weight:600}
+
+/* Search */
+.search-bar{padding:.9rem 2rem 0;flex-shrink:0}
+.search-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.65rem 1rem .65rem 2.6rem;color:var(--text);font-size:.9rem;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%238896b3' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:.85rem center}
+.search-input:focus{border-color:var(--accent)}
+
+/* Tabs */
+.tabs-wrap{padding:.8rem 2rem 0;overflow-x:auto;flex-shrink:0}
+.tabs{display:flex;gap:.35rem;white-space:nowrap}
+.tab{background:none;border:1px solid transparent;border-radius:8px;padding:.4rem .85rem;cursor:pointer;font-size:.82rem;color:var(--muted);transition:all .15s}
+.tab:hover{border-color:var(--border);color:var(--text)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.tab .cnt{font-size:.72rem;opacity:.75;margin-left:.25rem}
+
+/* Layout */
+.layout{display:flex;flex:1;gap:0;min-height:0}
+
+/* Sidebar */
+.sidebar{width:260px;flex-shrink:0;border-right:1px solid var(--border);overflow-y:auto;position:sticky;top:0;height:calc(100vh - 160px);scrollbar-width:thin;scrollbar-color:var(--border) transparent;background:var(--surface)}
+.sidebar-hd{padding:.55rem .9rem;border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;display:flex;justify-content:space-between}
+.sidebar-hd em{color:var(--accent);font-style:normal;font-weight:800}
+#sb-table{width:100%;border-collapse:collapse}
+#sb-table thead th{position:sticky;top:0;background:var(--surface2);padding:.4rem .65rem;text-align:left;font-size:.69rem;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none;border-bottom:1px solid var(--border);transition:color .12s;z-index:2}
+#sb-table thead th:hover{color:var(--text)}
+#sb-table thead th.sorted{color:var(--accent)}
+#sb-table thead th .si{margin-left:.2rem;opacity:.35;font-size:.66rem}
+#sb-table thead th.sorted .si{opacity:1}
+#sb-table tbody tr{cursor:pointer}
+#sb-table tbody tr:hover td{background:rgba(99,102,241,.07)}
+#sb-table tbody tr.sb-active td{background:rgba(99,102,241,.17)}
+#sb-table tbody tr.sb-hidden{display:none}
+#sb-table td{padding:.28rem .65rem;border-bottom:1px solid rgba(42,48,80,.3);vertical-align:middle}
+.sn{font-weight:600;color:var(--text);font-size:.77rem;line-height:1.2}
+.sc{font-family:'Cascadia Code','Fira Code',monospace;color:var(--sky);font-size:.66rem;margin-top:.07rem}
+.bdg-sm{font-size:.6rem;font-weight:700;padding:.09rem .35rem;border-radius:20px;display:inline-block;white-space:nowrap}
+
+/* Cards area */
+.cards-area{flex:1;min-width:0;padding:1.2rem 1.5rem 3rem;overflow-y:auto}
+.section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:1.6rem 0 .7rem}
+.section-label:first-child{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.9rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.55rem;transition:border-color .15s,transform .1s}
+.card:hover{border-color:#3d4a6e;transform:translateY(-1px)}
+.card.hidden{display:none}
+.ch{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+.ct{font-size:.92rem;font-weight:700;color:#fff}
+.cc{font-family:'Cascadia Code','Fira Code',monospace;font-size:.75rem;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:.13rem .42rem;color:var(--sky);white-space:nowrap}
+.bdg{font-size:.68rem;font-weight:700;padding:.13rem .42rem;border-radius:20px;white-space:nowrap}
+.cd{font-size:.83rem;color:var(--muted);line-height:1.5}
+.no-results{text-align:center;padding:4rem;color:var(--muted);display:none}
+.no-results.show{display:block}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>⚡ Claude Code Skills Reference <a href="claude-skills-map.html">⚛ 3D map</a></h1>
+  <p>Every installed skill — live from <code>skills-map-data.json</code>. Browse by pack, sort the sidebar, or search.</p>
+  <div class="stats" id="hdr-stats"></div>
+</div>
+
+<div class="search-bar">
+  <input class="search-input" id="search" type="text" placeholder="Search skills by name or description… (or just browse the tabs)">
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs" id="tabs"></div>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="sidebar-hd">Skills &nbsp;<em id="sb-count">0</em></div>
+    <table id="sb-table">
+      <thead><tr>
+        <th id="th-name" class="sorted">Skill <span class="si">↑</span></th>
+        <th id="th-cat">Pack <span class="si">↕</span></th>
+      </tr></thead>
+      <tbody id="sb-body"></tbody>
+    </table>
+  </div>
+
+  <div class="cards-area" id="cards-area">
+    <p class="no-results" id="no-results">No skills match your search.</p>
+  </div>
+</div>
+
+<script>
+const PALETTE = {
+  'game-theory':'#f43f5e','startup-os':'#f59e0b','gstack':'#6366f1','marketing':'#10b981',
+  'pstack':'#38bdf8','hyperframes':'#2dd4bf','dev-tools':'#a78bfa','superpowers':'#e879f9',
+  'design-studio':'#f472b6','company-gtm':'#fb923c','ios':'#94a3b8','fullsy':'#84cc16',
+  'advisors':'#facc15','anthropic':'#f8fafc','research':'#fb7185','misc':'#64748b'
+};
+const label = p => p.replace(/-/g,' ');
+const color = p => PALETTE[p] || '#64748b';
+const badge = (p, small) =>
+  `<span class="${small?'bdg-sm':'bdg'}" style="background:${color(p)}26;color:${color(p)};border:1px solid ${color(p)}55">${label(p)}</span>`;
+
+let SKILLS = [], PACKS = [], currentCat = 'all';
+let sortCol = 'name', sortAsc = true;
+
+fetch('skills-map-data.json').then(r=>r.json()).then(data => {
+  SKILLS = data.nodes.map(n => ({n:n.id, cmd:'/'+n.id, pack:n.pack, d:n.desc||''}));
+  const counts = {};
+  SKILLS.forEach(s => counts[s.pack] = (counts[s.pack]||0)+1);
+  PACKS = Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+
+  // stats
+  document.getElementById('hdr-stats').innerHTML =
+    `<span class="stat">${SKILLS.length} skills</span>` +
+    PACKS.slice(0,6).map(p=>`<span class="stat" style="color:${color(p)};border-color:${color(p)}44;background:${color(p)}14">${label(p)} · ${counts[p]}</span>`).join('') +
+    `<span class="stat">+ ${PACKS.length-6} more packs</span>`;
+
+  // tabs
+  const tabs = document.getElementById('tabs');
+  tabs.innerHTML = `<button class="tab active" data-cat="all">All <span class="cnt">${SKILLS.length}</span></button>` +
+    PACKS.map(p=>`<button class="tab" data-cat="${p}">${label(p)} <span class="cnt">${counts[p]}</span></button>`).join('');
+  tabs.querySelectorAll('.tab').forEach(b => b.onclick = () => {
+    tabs.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentCat = b.dataset.cat;
+    filterAll();
+  });
+
+  // cards, grouped by pack
+  const area = document.getElementById('cards-area');
+  for(const p of PACKS){
+    const lbl = document.createElement('div');
+    lbl.className = 'section-label'; lbl.dataset.cat = p;
+    lbl.textContent = `${label(p)} — ${counts[p]}`;
+    lbl.style.color = color(p);
+    const grid = document.createElement('div');
+    grid.className = 'grid'; grid.dataset.cat = p;
+    grid.innerHTML = SKILLS.filter(s=>s.pack===p).map((s,i) => `
+      <div class="card" data-cat="${p}" id="card-${s.n}">
+        <div class="ch"><span class="ct">${s.n.replace(/-/g,' ')}</span>${badge(p)}</div>
+        <span class="cc">${s.cmd}</span>
+        <div class="cd">${esc(s.d) || '<i>No description in frontmatter.</i>'}</div>
+      </div>`).join('');
+    area.appendChild(lbl); area.appendChild(grid);
+  }
+
+  buildSidebar();
+  filterAll();
+});
+
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+// ---------- sidebar ----------
+function buildSidebar(){
+  const rows = [...SKILLS].sort((a,b) => {
+    const k = sortCol==='name' ? [a.n,b.n] : [a.pack+a.n, b.pack+b.n];
+    return (sortAsc?1:-1) * k[0].localeCompare(k[1]);
+  });
+  document.getElementById('sb-body').innerHTML = rows.map(s => `
+    <tr data-name="${s.n}" data-cat="${s.pack}">
+      <td><div class="sn">${s.n.replace(/-/g,' ')}</div><div class="sc">${s.cmd}</div></td>
+      <td>${badge(s.pack, true)}</td>
+    </tr>`).join('');
+  document.querySelectorAll('#sb-body tr').forEach(tr => tr.onclick = () => {
+    document.querySelectorAll('#sb-body tr').forEach(x=>x.classList.remove('sb-active'));
+    tr.classList.add('sb-active');
+    const card = document.getElementById('card-'+tr.dataset.name);
+    if(card){
+      card.scrollIntoView({behavior:'smooth', block:'center'});
+      card.style.borderColor = 'var(--accent)';
+      card.style.boxShadow = '0 0 0 2px rgba(99,102,241,.35)';
+      setTimeout(()=>{ card.style.borderColor=''; card.style.boxShadow=''; }, 1600);
+    }
+  });
+  syncSidebar();
+}
+document.getElementById('th-name').onclick = () => setSort('name');
+document.getElementById('th-cat').onclick  = () => setSort('cat');
+function setSort(col){
+  if(sortCol===col) sortAsc = !sortAsc; else { sortCol = col; sortAsc = true; }
+  document.getElementById('th-name').classList.toggle('sorted', col==='name');
+  document.getElementById('th-cat').classList.toggle('sorted', col==='cat');
+  document.querySelector('#th-'+(col==='name'?'name':'cat')+' .si').textContent = sortAsc?'↑':'↓';
+  buildSidebar();
+}
+
+// ---------- filtering ----------
+function match(s, q){
+  if(currentCat!=='all' && s.dataset.cat!==currentCat) return false;
+  if(!q) return true;
+  return s.dataset.hay.includes(q);
+}
+function filterAll(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(c => {
+    if(!c.dataset.hay){
+      const s = SKILLS.find(x=>'card-'+x.n===c.id);
+      c.dataset.hay = (s.n+' '+s.d).toLowerCase();
+    }
+    const show = match(c, q);
+    c.classList.toggle('hidden', !show);
+    if(show) visible++;
+  });
+  document.querySelectorAll('.section-label, .grid[data-cat]').forEach(el => {
+    const tabOk = currentCat==='all' || el.dataset.cat===currentCat;
+    const grid = el.classList.contains('grid') ? el : el.nextElementSibling;
+    const any = grid ? [...grid.querySelectorAll('.card')].some(c=>!c.classList.contains('hidden')) : false;
+    el.style.display = (tabOk && any) ? '' : 'none';
+  });
+  document.getElementById('no-results').classList.toggle('show', visible===0);
+  syncSidebar();
+}
+function syncSidebar(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  let n = 0;
+  document.querySelectorAll('#sb-body tr').forEach(tr => {
+    const catOk = currentCat==='all' || tr.dataset.cat===currentCat;
+    const qOk = !q || tr.dataset.name.includes(q);
+    const show = catOk && qOk;
+    tr.classList.toggle('sb-hidden', !show);
+    if(show) n++;
+  });
+  document.getElementById('sb-count').textContent = n;
+}
+document.getElementById('search').addEventListener('input', filterAll);
+</script>
+</body>
+</html>
