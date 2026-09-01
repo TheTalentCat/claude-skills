@@ -69,6 +69,17 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .cc{font-family:'Cascadia Code','Fira Code',monospace;font-size:.75rem;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:.13rem .42rem;color:var(--sky);white-space:nowrap}
 .bdg{font-size:.68rem;font-weight:700;padding:.13rem .42rem;border-radius:20px;white-space:nowrap}
 .cd{font-size:.83rem;color:var(--muted);line-height:1.5}
+.eli5{font-size:.85rem;color:#cbd5e1;line-height:1.5}
+.cd.tech{font-size:.74rem;opacity:.75;max-height:4.6em;overflow:hidden;transition:max-height .2s}
+.card:hover .cd.tech{max-height:20em}
+.mb{font-size:.62rem;font-weight:800;padding:.1rem .4rem;border-radius:5px;letter-spacing:.03em;white-space:nowrap}
+.mb.auto{background:rgba(16,185,129,.14);color:#34d399;border:1px solid rgba(16,185,129,.35)}
+.mb.proactive{background:rgba(245,158,11,.14);color:#fbbf24;border:1px solid rgba(245,158,11,.35)}
+.mb.manual{background:rgba(56,189,248,.14);color:#7dd3fc;border:1px solid rgba(56,189,248,.35)}
+.mode-row{display:flex;gap:.4rem;padding:.6rem 2rem 0;flex-shrink:0;align-items:center}
+.mode-row .lab{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.mchip{background:none;border:1px solid var(--border);border-radius:20px;padding:.25rem .7rem;cursor:pointer;font-size:.74rem;color:var(--muted)}
+.mchip.on{border-color:var(--accent);color:#fff;background:rgba(99,102,241,.18)}
 .no-results{text-align:center;padding:4rem;color:var(--muted);display:none}
 .no-results.show{display:block}
 </style>
@@ -87,6 +98,14 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 <div class="tabs-wrap">
   <div class="tabs" id="tabs"></div>
+</div>
+
+<div class="mode-row">
+  <span class="lab">Activation</span>
+  <button class="mchip on" data-mode="all">All</button>
+  <button class="mchip" data-mode="auto" title="Claude can invoke it when the task fits">⚡ auto</button>
+  <button class="mchip" data-mode="proactive" title="Description demands use — fires eagerly">🔥 eager</button>
+  <button class="mchip" data-mode="manual" title="Only runs when you type the slash command">✋ manual</button>
 </div>
 
 <div class="layout">
@@ -118,11 +137,21 @@ const color = p => PALETTE[p] || '#64748b';
 const badge = (p, small) =>
   `<span class="${small?'bdg-sm':'bdg'}" style="background:${color(p)}26;color:${color(p)};border:1px solid ${color(p)}55">${label(p)}</span>`;
 
-let SKILLS = [], PACKS = [], currentCat = 'all';
+const MODE_META = {
+  auto:      {cls:'auto',      txt:'⚡ auto',   tip:'Claude can invoke this on its own when the task fits'},
+  proactive: {cls:'proactive', txt:'🔥 eager',  tip:'Written to fire aggressively (PROACTIVELY / MUST BE USED)'},
+  manual:    {cls:'manual',    txt:'✋ manual', tip:'Only runs when you type the slash command'}
+};
+const modeBadge = m => {
+  const x = MODE_META[m] || MODE_META.auto;
+  return `<span class="mb ${x.cls}" title="${x.tip}">${x.txt}</span>`;
+};
+
+let SKILLS = [], PACKS = [], currentCat = 'all', currentMode = 'all';
 let sortCol = 'name', sortAsc = true;
 
 fetch('skills-map-data.json').then(r=>r.json()).then(data => {
-  SKILLS = data.nodes.map(n => ({n:n.id, cmd:'/'+n.id, pack:n.pack, d:n.desc||''}));
+  SKILLS = data.nodes.map(n => ({n:n.id, cmd:'/'+n.id, pack:n.pack, d:n.desc||'', e:n.eli5||'', m:n.mode||'auto'}));
   const counts = {};
   SKILLS.forEach(s => counts[s.pack] = (counts[s.pack]||0)+1);
   PACKS = Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
@@ -154,10 +183,11 @@ fetch('skills-map-data.json').then(r=>r.json()).then(data => {
     const grid = document.createElement('div');
     grid.className = 'grid'; grid.dataset.cat = p;
     grid.innerHTML = SKILLS.filter(s=>s.pack===p).map((s,i) => `
-      <div class="card" data-cat="${p}" id="card-${s.n}">
+      <div class="card" data-cat="${p}" data-mode="${s.m}" id="card-${s.n}">
         <div class="ch"><span class="ct">${s.n.replace(/-/g,' ')}</span>${badge(p)}</div>
-        <span class="cc">${s.cmd}</span>
-        <div class="cd">${esc(s.d) || '<i>No description in frontmatter.</i>'}</div>
+        <div style="display:flex;gap:.4rem;align-items:center"><span class="cc">${s.cmd}</span>${modeBadge(s.m)}</div>
+        ${s.e ? `<div class="eli5">${esc(s.e)}</div>` : ''}
+        <div class="cd${s.e?' tech':''}">${esc(s.d) || '<i>No description in frontmatter.</i>'}</div>
       </div>`).join('');
     area.appendChild(lbl); area.appendChild(grid);
   }
@@ -175,7 +205,7 @@ function buildSidebar(){
     return (sortAsc?1:-1) * k[0].localeCompare(k[1]);
   });
   document.getElementById('sb-body').innerHTML = rows.map(s => `
-    <tr data-name="${s.n}" data-cat="${s.pack}">
+    <tr data-name="${s.n}" data-cat="${s.pack}" data-mode="${s.m}">
       <td><div class="sn">${s.n.replace(/-/g,' ')}</div><div class="sc">${s.cmd}</div></td>
       <td>${badge(s.pack, true)}</td>
     </tr>`).join('');
@@ -205,16 +235,23 @@ function setSort(col){
 // ---------- filtering ----------
 function match(s, q){
   if(currentCat!=='all' && s.dataset.cat!==currentCat) return false;
+  if(currentMode!=='all' && s.dataset.mode!==currentMode) return false;
   if(!q) return true;
   return s.dataset.hay.includes(q);
 }
+document.querySelectorAll('.mchip').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.mchip').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  currentMode = b.dataset.mode;
+  filterAll();
+});
 function filterAll(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   let visible = 0;
   document.querySelectorAll('.card').forEach(c => {
     if(!c.dataset.hay){
       const s = SKILLS.find(x=>'card-'+x.n===c.id);
-      c.dataset.hay = (s.n+' '+s.d).toLowerCase();
+      c.dataset.hay = (s.n+' '+s.e+' '+s.d).toLowerCase();
     }
     const show = match(c, q);
     c.classList.toggle('hidden', !show);
@@ -234,8 +271,9 @@ function syncSidebar(){
   let n = 0;
   document.querySelectorAll('#sb-body tr').forEach(tr => {
     const catOk = currentCat==='all' || tr.dataset.cat===currentCat;
+    const modeOk = currentMode==='all' || tr.dataset.mode===currentMode;
     const qOk = !q || tr.dataset.name.includes(q);
-    const show = catOk && qOk;
+    const show = catOk && modeOk && qOk;
     tr.classList.toggle('sb-hidden', !show);
     if(show) n++;
   });

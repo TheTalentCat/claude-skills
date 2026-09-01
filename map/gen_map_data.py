@@ -17,6 +17,7 @@ for name in sorted(os.listdir(SKILLS_DIR)):
     except OSError:
         continue
     desc = ""
+    mode = "auto"
     m = re.match(r"^---\s*\n(.*?)\n---", text, re.S)
     if m:
         fm = m.group(1)
@@ -24,15 +25,18 @@ for name in sorted(os.listdir(SKILLS_DIR)):
         if dm:
             desc = re.sub(r"\s+", " ", dm.group(1)).strip()
             desc = re.sub(r"^[>|][-+]?\s*", "", desc)
-    skills[name] = {"id": name, "desc": desc[:400]}
+        if re.search(r"^disable-model-invocation:\s*true", fm, re.M):
+            mode = "manual"
+        elif re.search(r"PROACTIVELY|MUST BE USED|always apply|Must always apply", desc, re.I):
+            mode = "proactive"
+    skills[name] = {"id": name, "desc": desc[:400], "mode": mode}
 
 # ---- 2. pack assignment ----
-# a) src labels from reference HTML SKILLS array
+# a) persistent registry (primary source; self-maintained below)
+PACKS_JSON = os.path.expanduser("~/claude-skills/map/packs.json")
 pack = {}
-if os.path.isfile(REF_HTML):
-    html = open(REF_HTML, encoding="utf-8", errors="replace").read()
-    for m in re.finditer(r'cmd:"/([^"]+)",cat:"[^"]*",src:"([^"]*)"', html):
-        pack[m.group(1)] = m.group(2)
+if os.path.isfile(PACKS_JSON):
+    pack.update(json.load(open(PACKS_JSON, encoding="utf-8")))
 
 # b) later commits in the claude-skills repo: commit subject -> pack label
 COMMIT_PACKS = [
@@ -79,6 +83,12 @@ for label, names in EXTRA.items():
 for name, s in skills.items():
     s["pack"] = pack.get(name, "misc")
 
+# write resolved packs back so new skills only need assigning once
+if os.path.isdir(os.path.dirname(PACKS_JSON)):
+    json.dump({n: s["pack"] for n, s in skills.items()},
+              open(PACKS_JSON, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=0, sort_keys=True)
+
 # ---- 3. edges from description cross-references ----
 names = set(skills)
 edges = set()
@@ -102,6 +112,14 @@ for name, s in skills.items():
         t = m.group(1)
         if t in names and t != name:
             edges.add(tuple(sorted((name, t))))
+
+# ---- 3b. merge ELI5 summaries if present ----
+ELI5 = os.path.expanduser("~/claude-skills/map/eli5.json")
+if os.path.isfile(ELI5):
+    eli5 = json.load(open(ELI5, encoding="utf-8"))
+    for name, s in skills.items():
+        if name in eli5:
+            s["eli5"] = eli5[name]
 
 nodes = sorted(skills.values(), key=lambda s: (s["pack"], s["id"]))
 links = [{"source": a, "target": b, "kind": "ref"} for a, b in sorted(edges)]

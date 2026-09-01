@@ -185,7 +185,7 @@ const Graph = ForceGraph3D()(document.getElementById('graph'))
   .nodeLabel(n => n.hub ? '' :
     `<div style="background:rgba(10,12,24,.92);border:1px solid rgba(99,110,160,.4);border-radius:8px;padding:6px 10px;font-size:12px;max-width:280px">
        <b style="color:${PALETTE[n.pack]||'#fff'}">/${n.id}</b><br>
-       <span style="color:#8896b3">${(n.desc||'').slice(0,140)}</span></div>`)
+       <span style="color:#8896b3">${n.eli5 || (n.desc||'').slice(0,140)}</span></div>`)
   .nodeThreeObject(n => {
     const hex = PALETTE[n.pack] || '#64748b';
     if(n.hub){
@@ -293,11 +293,13 @@ for(const p of Object.keys(packCounts).sort((a,b)=>packCounts[b]-packCounts[a]))
 }
 
 // ---------- info card ----------
+const MODE_TXT = {auto:'⚡ auto-triggers', proactive:'🔥 fires eagerly', manual:'✋ manual only'};
 function openCard(n){
   document.getElementById('c-name').textContent = '/'+n.id;
   const pk = document.getElementById('c-pack');
-  pk.textContent = PACK_LABEL(n.pack); pk.style.color = PALETTE[n.pack]||'#fff';
-  document.getElementById('c-desc').textContent = n.desc || 'No description.';
+  pk.textContent = PACK_LABEL(n.pack) + '  ·  ' + (MODE_TXT[n.mode]||MODE_TXT.auto);
+  pk.style.color = PALETTE[n.pack]||'#fff';
+  document.getElementById('c-desc').textContent = (n.eli5 ? n.eli5 + '\n\n' : '') + (n.desc || 'No description.');
   const conns = neighbors[n.id]||[];
   const cEl = document.getElementById('c-conns');
   cEl.innerHTML = conns.length
