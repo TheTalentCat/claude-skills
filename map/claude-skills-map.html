@@ -359,8 +359,15 @@ function openPackCard(p){
     .filter(n=>!n.hub && n.pack===p)
     .sort((a,b)=>a.id.localeCompare(b.id));
   const cEl = document.getElementById('c-conns');
-  cEl.innerHTML = members.map(m=>
-    `<a data-id="${m.id}" title="${(m.eli5||'').replace(/"/g,'&quot;')}">/${m.id}</a>`).join('');
+  const link = m => `<a data-id="${m.id}" title="${(m.eli5||'').replace(/"/g,'&quot;')}">/${m.id}</a>`;
+  const groups = {};
+  members.forEach(m => (groups[m.sub || ''] = groups[m.sub || ''] || []).push(m));
+  const gNames = Object.keys(groups).sort((a,b)=> groups[b].length-groups[a].length || a.localeCompare(b));
+  cEl.innerHTML = (gNames.length > 1)
+    ? gNames.map(g =>
+        `<div style="margin-top:.65rem"><b style="color:${PALETTE[p]}cc">${g||'Other'} · ${groups[g].length}</b><br>`
+        + groups[g].map(link).join('') + '</div>').join('')
+    : members.map(link).join('');
   cEl.querySelectorAll('a').forEach(a => a.onclick = ()=>{
     const t = Graph.graphData().nodes.find(x=>x.id===a.dataset.id);
     if(t){ openCard(t); focusNode(t); }

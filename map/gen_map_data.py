@@ -113,6 +113,14 @@ for name, s in skills.items():
         if t in names and t != name:
             edges.add(tuple(sorted((name, t))))
 
+# ---- 3a2. merge sub-categories if present ----
+SUBCATS = os.path.expanduser("~/claude-skills/map/subcats.json")
+if os.path.isfile(SUBCATS):
+    subs = json.load(open(SUBCATS, encoding="utf-8"))
+    for name, s in skills.items():
+        if name in subs:
+            s["sub"] = subs[name]
+
 # ---- 3b. merge ELI5 summaries if present ----
 ELI5 = os.path.expanduser("~/claude-skills/map/eli5.json")
 if os.path.isfile(ELI5):
