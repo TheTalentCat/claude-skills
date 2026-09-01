@@ -46,6 +46,7 @@
   .card p{font-size:12px;line-height:1.55;color:var(--muted);max-height:180px;overflow-y:auto;scrollbar-width:thin}
   .card .conns{margin-top:10px;border-top:1px solid var(--border);padding-top:9px}
   .card .conns b{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+  .card .conns{max-height:46vh;overflow-y:auto;scrollbar-width:thin}
   .card .conns a{display:inline-block;font-size:11px;color:#93c5fd;margin:3px 6px 0 0;cursor:pointer;text-decoration:none}
   .card .conns a:hover{text-decoration:underline}
   .card .x{position:absolute;top:9px;right:12px;color:var(--muted);cursor:pointer;font-size:15px}
@@ -142,7 +143,7 @@ function blobMaterial(hex, boost){
   materials.push(m);
   return m;
 }
-function labelSprite(text, hex){
+function labelSprite(text, hex, sw=46, sh=11.5){
   const c = document.createElement('canvas'); const s = 256; c.width = s*4; c.height = s;
   const g = c.getContext('2d');
   g.font = '700 64px Segoe UI, sans-serif'; g.textAlign='center'; g.textBaseline='middle';
@@ -150,7 +151,17 @@ function labelSprite(text, hex){
   g.fillText(text, c.width/2, s/2);
   const sp = new THREE.Sprite(new THREE.SpriteMaterial({
     map:new THREE.CanvasTexture(c), transparent:true, depthWrite:false, opacity:.95 }));
-  sp.scale.set(46, 11.5, 1);
+  sp.scale.set(sw, sh, 1);
+  return sp;
+}
+// per-skill name label, created lazily the first time its cluster is drilled into
+function memberLabel(n){
+  if(n.__mlbl) return n.__mlbl;
+  const sp = labelSprite(n.id, PALETTE[n.pack]||'#fff', 30, 7.5);
+  sp.position.y = 6.5;
+  sp.visible = false;
+  n.__grp.add(sp);
+  n.__mlbl = sp;
   return sp;
 }
 
@@ -218,7 +229,10 @@ const Graph = ForceGraph3D()(document.getElementById('graph'))
     mesh.material.uniforms.uAmp.value = mode==='proactive' ? 0.24 : mode==='manual' ? 0.05 : 0.13;
     mesh.scale.setScalar(2.6 + Math.min(deg,6)*0.45);
     n.__mat = mesh.material;
-    return mesh;
+    const grp = new THREE.Group();
+    grp.add(mesh);
+    n.__grp = grp;
+    return grp;
   })
   .linkColor(l => l.kind==='ref' ? 'rgba(147,197,253,.85)' : 'rgba(99,110,160,.16)')
   .linkWidth(l => l.kind==='ref' ? 1.1 : 0.3)
@@ -226,7 +240,10 @@ const Graph = ForceGraph3D()(document.getElementById('graph'))
   .linkDirectionalParticles(l => l.kind==='ref' ? 2 : 0)
   .linkDirectionalParticleWidth(1.6)
   .linkDirectionalParticleSpeed(0.004)
-  .onNodeClick(n => { if(!n.hub) openCard(n); focusNode(n); })
+  .onNodeClick(n => {
+    if(n.hub){ isolatePack(n.pack); }
+    else { openCard(n); focusNode(n); }
+  })
   .onBackgroundClick(closeCard)
   .enableNodeDrag(false)
   .showNavInfo(false);
@@ -278,6 +295,10 @@ function applyFilter(){
     const v = visible(n);
     if(n.__mat) n.__mat.uniforms.uDim.value = v ? 1 : 0.06;
     if(n.__lbl) n.__lbl.material.opacity = v ? .95 : .06;
+    // drill-down: name every orb in the isolated cluster
+    const wantLbl = !n.hub && activePack && n.pack===activePack && v;
+    if(wantLbl) memberLabel(n).visible = true;
+    else if(n.__mlbl) n.__mlbl.visible = false;
   });
   Graph.linkVisibility(l => {
     const s = typeof l.source==='object'?l.source:Graph.graphData().nodes.find(n=>n.id===l.source);
@@ -295,23 +316,56 @@ document.querySelectorAll('.mch').forEach(b => b.onclick = () => {
   applyFilter();
 });
 addEventListener('keydown', e => { if(e.key==='Escape'){
-  query=''; document.getElementById('search').value=''; closeCard(); applyFilter(); }});
+  query=''; document.getElementById('search').value='';
+  activePack = null;
+  legend.querySelectorAll('.lg').forEach(x=>x.classList.remove('active'));
+  closeCard(); applyFilter(); }});
 
-// legend
+// legend + isolation
 const legend = document.getElementById('legend');
+const legendEls = {};
+function isolatePack(p){
+  activePack = (activePack===p) ? null : p;
+  legend.querySelectorAll('.lg').forEach(x=>x.classList.remove('active'));
+  if(activePack){
+    legendEls[p]?.classList.add('active');
+    applyFilter();
+    openPackCard(p);
+    const hub = Graph.graphData().nodes.find(n=>n.hub&&n.pack===p);
+    if(hub) focusNode(hub);
+  } else {
+    applyFilter();
+    closeCard();
+  }
+}
 for(const p of Object.keys(packCounts).sort((a,b)=>packCounts[b]-packCounts[a])){
   const el = document.createElement('div');
   el.className='lg';
   el.innerHTML = `<span class="dot" style="background:${PALETTE[p]};color:${PALETTE[p]}"></span>
                   ${PACK_LABEL(p)} <span class="n">${packCounts[p]}</span>`;
-  el.onclick = ()=>{
-    activePack = activePack===p ? null : p;
-    legend.querySelectorAll('.lg').forEach(x=>x.classList.remove('active'));
-    if(activePack) el.classList.add('active');
-    applyFilter();
-    if(activePack){ const hub = Graph.graphData().nodes.find(n=>n.hub&&n.pack===p); if(hub) focusNode(hub); }
-  };
+  el.onclick = ()=> isolatePack(p);
+  legendEls[p] = el;
   legend.appendChild(el);
+}
+
+// pack index panel — alphabetical drill-down list for the isolated cluster
+function openPackCard(p){
+  document.getElementById('c-name').textContent = PACK_LABEL(p);
+  const pk = document.getElementById('c-pack');
+  pk.textContent = packCounts[p] + ' skills · click one to fly to it';
+  pk.style.color = PALETTE[p]||'#fff';
+  document.getElementById('c-desc').textContent = '';
+  const members = Graph.graphData().nodes
+    .filter(n=>!n.hub && n.pack===p)
+    .sort((a,b)=>a.id.localeCompare(b.id));
+  const cEl = document.getElementById('c-conns');
+  cEl.innerHTML = members.map(m=>
+    `<a data-id="${m.id}" title="${(m.eli5||'').replace(/"/g,'&quot;')}">/${m.id}</a>`).join('');
+  cEl.querySelectorAll('a').forEach(a => a.onclick = ()=>{
+    const t = Graph.graphData().nodes.find(x=>x.id===a.dataset.id);
+    if(t){ openCard(t); focusNode(t); }
+  });
+  document.getElementById('card').classList.add('show');
 }
 
 // ---------- info card ----------
