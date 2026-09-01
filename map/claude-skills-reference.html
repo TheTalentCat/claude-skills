@@ -15,8 +15,9 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 /* Header */
 .hdr{background:linear-gradient(135deg,#1e1b4b 0%,#1e2336 100%);border-bottom:1px solid var(--border);padding:1.5rem 2rem 1.2rem}
 .hdr h1{font-size:1.6rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.5rem}
-.hdr h1 a{margin-left:auto;font-size:.8rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(99,102,241,.4);border-radius:8px;padding:.3rem .7rem}
-.hdr h1 a:hover{background:rgba(99,102,241,.15)}
+.hdr h1 .links{margin-left:auto;display:flex;gap:.5rem}
+.hdr h1 .links a{font-size:.8rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid rgba(99,102,241,.4);border-radius:8px;padding:.3rem .7rem;white-space:nowrap}
+.hdr h1 .links a:hover{background:rgba(99,102,241,.15)}
 .hdr p{color:var(--muted);margin-top:.3rem;font-size:.9rem}
 .stats{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
 .stat{background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:8px;padding:.3rem .7rem;font-size:.78rem;color:var(--accent);font-weight:600}
@@ -88,8 +89,15 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <body>
 
 <div class="hdr">
-  <h1>⚡ Claude Code Skills Reference <a href="claude-skills-map.html">⚛ 3D map</a></h1>
-  <p>Every installed skill — live from <code>skills-map-data.json</code>. Browse by pack, sort the sidebar, or search.</p>
+  <h1>⚡ Claude Code Skills Reference
+    <span class="links">
+      <a href="claude-skills-map.html">⚛ 3D map</a>
+      <a href="https://github.com/TheTalentCat/claude-skills" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/TheTalentCat/claude-skills/archive/refs/heads/master.zip">⬇ Download all (.zip)</a>
+    </span>
+  </h1>
+  <p>Every installed skill — live from <code>skills-map-data.json</code>. Browse by pack, sort the sidebar, or search.
+     To install: unzip, then copy <code>skills/*</code> into <code>~/.claude/skills/</code> and <code>commands/*</code> into <code>~/.claude/commands/</code>.</p>
   <div class="stats" id="hdr-stats"></div>
 </div>
 
