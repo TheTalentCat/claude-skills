@@ -98,3 +98,8 @@ ones marked (Josh) need operator action, not agent action:
   cheap; evidence is the product.
 - Scrubbing your own wrong record instead of handing it to the next
   reviewer as claims-to-verify.
+- Accepting "covered by tests" without checking the fixture matches the real
+  producer's output. A stand-in fixture (a plain 1-line CSV header where the
+  real generator emits a metadata preamble first) proves nothing about
+  production — it can pass while the real path is broken. Verify the fixture
+  shape, not just the assertion. (A09 split-header defect, 2026-09-14.)
