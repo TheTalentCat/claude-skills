@@ -103,3 +103,10 @@ ones marked (Josh) need operator action, not agent action:
   real generator emits a metadata preamble first) proves nothing about
   production — it can pass while the real path is broken. Verify the fixture
   shape, not just the assertion. (A09 split-header defect, 2026-09-14.)
+- Verifying against the wrong tree. When the work lives at a specific candidate
+  SHA in a specific worktree, read THAT checkout — never a same-named sibling
+  (a primary repo, another worktree) that may sit at a different commit. Reading
+  a stale sibling once produced a confident but wrong finding that the handler
+  had to correct. Confirm the SHA of the tree you're reading; the byte-compare
+  discipline exists to prevent exactly this, so don't skip it for a "quick" read.
+  (A09 silent-success mis-attribution, 2026-09-14.)
