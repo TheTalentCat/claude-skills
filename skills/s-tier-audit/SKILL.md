@@ -110,3 +110,11 @@ ones marked (Josh) need operator action, not agent action:
   had to correct. Confirm the SHA of the tree you're reading; the byte-compare
   discipline exists to prevent exactly this, so don't skip it for a "quick" read.
   (A09 silent-success mis-attribution, 2026-09-14.)
+- Letting the chat summary drift looser than the artifact. The disciplined
+  verdict/answer file says "candidate" and "standing ≠ operating"; the casual
+  summary to the user says "verified," "deliverable," "dead." Overstatement in
+  an off-hand summary carries the same authority as a finding and misleads just
+  as much — and it often contradicts your OWN careful document from minutes
+  earlier. Hold the summary to the artifact's precision: never upgrade
+  candidate→verified, standing→operating, or partial→complete in prose you'd
+  never write in the file. (Marie supplier summary, 2026-09-15.)
