@@ -118,3 +118,13 @@ ones marked (Josh) need operator action, not agent action:
   earlier. Hold the summary to the artifact's precision: never upgrade
   candidate→verified, standing→operating, or partial→complete in prose you'd
   never write in the file. (Marie supplier summary, 2026-09-15.)
+
+<!-- anti-pattern added 2026-09-16 -->
+- Attributing AGGREGATE totals to a SPECIFIC item. An account-wide invoice
+  delta, a roster-wide count, a usage subtotal — none of these attribute to one
+  task/record/order. I claimed a Maps probe "charged $1.21 / ran enrichment"
+  from /profile invoice deltas while the task was still Running and unbilled; the
+  delta was other activity. Use the per-item authority (the Tasks page row, the
+  per-record line), not aggregate math, and if only the aggregate exists, say
+  "not attributable" — never pin it to the item you happen to be looking at.
+  (Marie Outscraper probe, 2026-09-16. Third instance this engagement.)
