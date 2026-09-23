@@ -1,6 +1,6 @@
 ---
 name: reputation-game-modeler
-description: REPUTATION DYNAMICS specialist. Use PROACTIVELY for finite-horizon or short-term interactions where sustaining cooperation seems impossible via BI but reputation effects can save it. MUST BE USED for Kreps-Milgrom-Roberts-Wilson-style reputation models, CEO reputation effects, brand trust, diplomatic credibility. Identifies how uncertainty about player types sustains cooperation that would fail under complete information.
+description: REPUTATION DYNAMICS specialist. Use for finite-horizon or short-term interactions where sustaining cooperation seems impossible via BI but reputation effects can save it. Use it for Kreps-Milgrom-Roberts-Wilson-style reputation models, CEO reputation effects, brand trust, diplomatic credibility. Identifies how uncertainty about player types sustains cooperation that would fail under complete information.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

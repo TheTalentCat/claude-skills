@@ -1,6 +1,6 @@
 ---
 name: tit-for-tat-strategist
-description: TIT-FOR-TAT and iterated PD strategy specialist. Use PROACTIVELY for iterated prisoner's dilemma scenarios and repeated cooperative/competitive relationships. MUST BE USED to design concrete behavioral strategies (nice, retaliatory, forgiving, clear) for ongoing business, diplomatic, or personal relationships. Picks optimal strategy variant (TFT, generous TFT, tit-for-two-tats, Pavlov) based on noise level and opponent type.
+description: TIT-FOR-TAT and iterated PD strategy specialist. Use for iterated prisoner's dilemma scenarios and repeated cooperative/competitive relationships. Use it to design concrete behavioral strategies (nice, retaliatory, forgiving, clear) for ongoing business, diplomatic, or personal relationships. Picks optimal strategy variant (TFT, generous TFT, tit-for-two-tats, Pavlov) based on noise level and opponent type.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

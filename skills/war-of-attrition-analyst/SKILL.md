@@ -1,6 +1,6 @@
 ---
 name: war-of-attrition-analyst
-description: WAR OF ATTRITION specialist. Use PROACTIVELY when two (or more) parties bear ongoing costs until one drops out. MUST BE USED for strikes, siege warfare, patent battles, protracted lawsuits, long bidding contests, corporate acquisitions, and any scenario where whoever quits first loses. Computes expected duration, cost estimates, and exit strategy.
+description: WAR OF ATTRITION specialist. Use when two (or more) parties bear ongoing costs until one drops out. Use it for strikes, siege warfare, patent battles, protracted lawsuits, long bidding contests, corporate acquisitions, and any scenario where whoever quits first loses. Computes expected duration, cost estimates, and exit strategy.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

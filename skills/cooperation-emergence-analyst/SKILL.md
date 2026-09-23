@@ -1,6 +1,6 @@
 ---
 name: cooperation-emergence-analyst
-description: COOPERATION EMERGENCE specialist. Use PROACTIVELY to understand HOW cooperation arises in populations of self-interested agents without central enforcement. MUST BE USED for evolutionary analysis of cooperation, group-selection dynamics, norm emergence, virality of cooperative strategies, and designing conditions that foster emergence. Synthesizes kin selection, reciprocal altruism, group selection, and cultural evolution mechanisms.
+description: COOPERATION EMERGENCE specialist. Use to understand HOW cooperation arises in populations of self-interested agents without central enforcement. Use it for evolutionary analysis of cooperation, group-selection dynamics, norm emergence, virality of cooperative strategies, and designing conditions that foster emergence. Synthesizes kin selection, reciprocal altruism, group selection, and cultural evolution mechanisms.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

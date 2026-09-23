@@ -1,6 +1,6 @@
 ---
 name: stochastic-game-analyst
-description: STOCHASTIC and state-dependent dynamic games specialist. Use PROACTIVELY for games where payoffs depend on evolving state variables — inventory games, pursuit-evasion, market dynamics, bargaining with shifting BATNAs, Markov decision processes with strategic opponents. MUST BE USED for dynamic programming solutions to games and when stage-game payoffs are not fixed but depend on a state that changes based on actions.
+description: STOCHASTIC and state-dependent dynamic games specialist. Use for games where payoffs depend on evolving state variables — inventory games, pursuit-evasion, market dynamics, bargaining with shifting BATNAs, Markov decision processes with strategic opponents. Use it for dynamic programming solutions to games and when stage-game payoffs are not fixed but depend on a state that changes based on actions.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: propaganda-detector
-description: PROPAGANDA and narrative-engineering detection specialist (Jiang framework). Use PROACTIVELY to identify when messages, media, curricula, or cultural products are engineered to shape beliefs rather than inform. MUST BE USED when evaluating political speeches, campaign materials, corporate communications, national myths, and educational content. Applies Jiang's Aeneid-style analysis to contemporary propaganda detection.
+description: PROPAGANDA and narrative-engineering detection specialist (Jiang framework). Use to identify when messages, media, curricula, or cultural products are engineered to shape beliefs rather than inform. Use it when evaluating political speeches, campaign materials, corporate communications, national myths, and educational content. Applies Jiang's Aeneid-style analysis to contemporary propaganda detection.
 tools: Read, Grep, Glob, WebSearch
 model: opus
 permissionMode: default

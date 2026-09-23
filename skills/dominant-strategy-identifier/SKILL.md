@@ -1,6 +1,6 @@
 ---
 name: dominant-strategy-identifier
-description: DOMINANT AND DOMINATED STRATEGY specialist. Use PROACTIVELY as the first analytical pass on any normal-form game before invoking Nash-finders. MUST BE USED to detect strictly-dominant-strategy equilibria (the strongest form of prediction) and to simplify games via iterated elimination of dominated strategies.
+description: DOMINANT AND DOMINATED STRATEGY specialist. Use as the first analytical pass on any normal-form game before invoking Nash-finders. Use it to detect strictly-dominant-strategy equilibria (the strongest form of prediction) and to simplify games via iterated elimination of dominated strategies.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

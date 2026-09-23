@@ -1,6 +1,6 @@
 ---
 name: nash-equilibrium-finder
-description: NASH EQUILIBRIUM specialist. Use PROACTIVELY for any finite non-cooperative game once the payoff matrix or extensive form is known. MUST BE USED to enumerate all pure-strategy Nash equilibria and (when relevant) flag the need for mixed-strategy calculation. Returns the complete NE set with verification and stability notes.
+description: NASH EQUILIBRIUM specialist. Use for any finite non-cooperative game once the payoff matrix or extensive form is known. Use it to enumerate all pure-strategy Nash equilibria and (when relevant) flag the need for mixed-strategy calculation. Returns the complete NE set with verification and stability notes.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

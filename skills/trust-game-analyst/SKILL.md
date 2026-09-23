@@ -1,6 +1,6 @@
 ---
 name: trust-game-analyst
-description: TRUST GAME and reciprocity specialist. Use PROACTIVELY for sequential-move situations where one party must commit value before knowing if the other will reciprocate. MUST BE USED for venture capital investments, advance payments, hiring decisions, contractor relationships, diplomatic overtures, and any scenario where trust-sending precedes trust-returning. Analyzes trust-sending amounts and return probabilities using reciprocity + stake models.
+description: TRUST GAME and reciprocity specialist. Use for sequential-move situations where one party must commit value before knowing if the other will reciprocate. Use it for venture capital investments, advance payments, hiring decisions, contractor relationships, diplomatic overtures, and any scenario where trust-sending precedes trust-returning. Analyzes trust-sending amounts and return probabilities using reciprocity + stake models.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

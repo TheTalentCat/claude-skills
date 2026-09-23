@@ -1,6 +1,6 @@
 ---
 name: cohesion-discipline-devotion-auditor
-description: MILITARY / ORGANIZATIONAL STRENGTH specialist (Jiang framework). Use PROACTIVELY to assess relative strength between tribal vs imperial, startup vs incumbent, challenger vs hegemon. MUST BE USED when trying to understand why a weaker-looking force defeats a stronger one. Audits cohesion (unity), discipline (training), and devotion (purpose) — Jiang's three-factor model of military / organizational effectiveness.
+description: MILITARY / ORGANIZATIONAL STRENGTH specialist (Jiang framework). Use to assess relative strength between tribal vs imperial, startup vs incumbent, challenger vs hegemon. Use it when trying to understand why a weaker-looking force defeats a stronger one. Audits cohesion (unity), discipline (training), and devotion (purpose) — Jiang's three-factor model of military / organizational effectiveness.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

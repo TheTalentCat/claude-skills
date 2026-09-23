@@ -1,6 +1,6 @@
 ---
 name: commitment-device-engineer
-description: COMMITMENT DEVICE design specialist. Use PROACTIVELY when you need to credibly tie your own hands to strengthen a strategic position. MUST BE USED for pre-commitment in negotiation, public promises, self-control devices, and strategic moves where visible binding increases leverage. Engineers specific mechanisms that make future actions credible and irreversible.
+description: COMMITMENT DEVICE design specialist. Use when you need to credibly tie your own hands to strengthen a strategic position. Use it for pre-commitment in negotiation, public promises, self-control devices, and strategic moves where visible binding increases leverage. Engineers specific mechanisms that make future actions credible and irreversible.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

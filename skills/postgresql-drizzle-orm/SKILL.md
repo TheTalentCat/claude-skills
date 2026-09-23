@@ -1,6 +1,6 @@
 ---
 name: postgres-drizzle
-description: PostgreSQL and Drizzle ORM best practices. Use when writing database schemas, queries, migrations, or any database-related code. Triggers on mentions of PostgreSQL, Postgres, Drizzle, database, schema, tables, columns, indexes, queries, migrations, ORM, relations, joins, transactions, or SQL. Proactively apply when creating APIs, backends, or data models.
+description: PostgreSQL and Drizzle ORM best practices. Use when writing database schemas, queries, migrations, or any database-related code. Triggers on mentions of PostgreSQL, Postgres, Drizzle, database, schema, tables, columns, indexes, queries, migrations, ORM, relations, joins, transactions, or SQL.
 ---
 
 # PostgreSQL + Drizzle ORM Best Practices

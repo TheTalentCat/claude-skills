@@ -1,6 +1,6 @@
 ---
 name: common-knowledge-analyst
-description: COMMON KNOWLEDGE specialist. Use PROACTIVELY to analyze what is actually common knowledge vs merely known privately or mutually. MUST BE USED for coordination problems, revolutions and mass movements (requires common knowledge of discontent), market panics, and any situation where "everyone knowing" differs from "everyone knowing everyone knows." Applies Aumann's agreement theorem and common-knowledge generator analysis.
+description: COMMON KNOWLEDGE specialist. Use to analyze what is actually common knowledge vs merely known privately or mutually. Use it for coordination problems, revolutions and mass movements (requires common knowledge of discontent), market panics, and any situation where "everyone knowing" differs from "everyone knowing everyone knows." Applies Aumann's agreement theorem and common-knowledge generator analysis.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

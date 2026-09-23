@@ -1,6 +1,6 @@
 ---
 name: voting-strategy-analyst
-description: VOTING and collective-choice game theory specialist. Use PROACTIVELY for elections, legislative votes, committee decisions, shareholder votes, and any formal decision-making body. MUST BE USED to analyze strategic voting, sincere vs insincere preferences, Arrow's impossibility, median voter theorem, coalition formation in legislatures, and vote manipulation.
+description: VOTING and collective-choice game theory specialist. Use for elections, legislative votes, committee decisions, shareholder votes, and any formal decision-making body. Use it to analyze strategic voting, sincere vs insincere preferences, Arrow's impossibility, median voter theorem, coalition formation in legislatures, and vote manipulation.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

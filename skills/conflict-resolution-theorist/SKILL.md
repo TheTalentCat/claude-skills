@@ -1,6 +1,6 @@
 ---
 name: conflict-resolution-theorist
-description: CONFLICT RESOLUTION and peace-building specialist. Use PROACTIVELY for mediating disputes, designing peace agreements, labor-management settlements, lawsuits, international treaties. MUST BE USED to identify positive-sum solutions in apparently zero-sum conflicts and to design mechanisms that stabilize agreements after reached. Applies Fisher-Ury and game-theoretic frameworks.
+description: CONFLICT RESOLUTION and peace-building specialist. Use for mediating disputes, designing peace agreements, labor-management settlements, lawsuits, international treaties. Use it to identify positive-sum solutions in apparently zero-sum conflicts and to design mechanisms that stabilize agreements after reached. Applies Fisher-Ury and game-theoretic frameworks.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

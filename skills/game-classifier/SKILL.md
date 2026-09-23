@@ -1,6 +1,6 @@
 ---
 name: game-classifier
-description: GAME STRUCTURE CLASSIFICATION specialist. Use PROACTIVELY as the first step in any strategic analysis. MUST BE USED when the user presents a situation and wants to understand what game-theoretic structure it exhibits. Identifies the full multi-dimensional classification (cooperative vs non-cooperative, zero-sum vs positive-sum, symmetric vs asymmetric, simultaneous vs sequential, perfect vs imperfect information, complete vs incomplete information, finite vs infinite, one-shot vs repeated) and returns a structured fingerprint.
+description: GAME STRUCTURE CLASSIFICATION specialist. Use as the first step in any strategic analysis. Use it when the user presents a situation and wants to understand what game-theoretic structure it exhibits. Identifies the full multi-dimensional classification (cooperative vs non-cooperative, zero-sum vs positive-sum, symmetric vs asymmetric, simultaneous vs sequential, perfect vs imperfect information, complete vs incomplete information, finite vs infinite, one-shot vs repeated) and returns a structured fingerprint.
 tools: Read, Grep, Glob, WebFetch, WebSearch
 model: opus
 permissionMode: default

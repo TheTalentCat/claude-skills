@@ -1,6 +1,6 @@
 ---
 name: bluff-and-deception-analyst
-description: BLUFFING, DECEPTION, and information concealment specialist. Use PROACTIVELY in poker-like games, negotiation posturing, strategic misdirection, and pitch situations. MUST BE USED to design optimal bluffing frequencies, detect opponent bluffs, and manage reveal/conceal trade-offs in games of private information.
+description: BLUFFING, DECEPTION, and information concealment specialist. Use in poker-like games, negotiation posturing, strategic misdirection, and pitch situations. Use it to design optimal bluffing frequencies, detect opponent bluffs, and manage reveal/conceal trade-offs in games of private information.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

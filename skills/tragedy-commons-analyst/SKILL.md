@@ -1,6 +1,6 @@
 ---
 name: tragedy-commons-analyst
-description: TRAGEDY OF THE COMMONS specialist. Use PROACTIVELY for depletable common-pool resources — fisheries, aquifers, atmospheric emissions, antibiotic effectiveness, groundwater, overgrazing, server capacity. MUST BE USED to diagnose resource-collapse risk, compute carrying capacity thresholds, and identify Ostrom-style institutional solutions. Distinct from generic public goods — the resource itself can be destroyed.
+description: TRAGEDY OF THE COMMONS specialist. Use for depletable common-pool resources — fisheries, aquifers, atmospheric emissions, antibiotic effectiveness, groundwater, overgrazing, server capacity. Use it to diagnose resource-collapse risk, compute carrying capacity thresholds, and identify Ostrom-style institutional solutions. Distinct from generic public goods — the resource itself can be destroyed.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

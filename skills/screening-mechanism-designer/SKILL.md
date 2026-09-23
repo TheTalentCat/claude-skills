@@ -1,6 +1,6 @@
 ---
 name: screening-mechanism-designer
-description: SCREENING MECHANISM DESIGN specialist. Use PROACTIVELY for the uninformed party (principal) who needs to design contracts or menus that induce informed agents to self-select. MUST BE USED for insurance menus, loan product design, tiered pricing, nonlinear contracts, second-degree price discrimination, and reverse engineering agent types via menu choices.
+description: SCREENING MECHANISM DESIGN specialist. Use for the uninformed party (principal) who needs to design contracts or menus that induce informed agents to self-select. Use it for insurance menus, loan product design, tiered pricing, nonlinear contracts, second-degree price discrimination, and reverse engineering agent types via menu choices.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

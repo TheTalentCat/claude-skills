@@ -1,6 +1,6 @@
 ---
 name: power-transition-analyst
-description: POWER TRANSITION specialist for rise-and-fall dynamics (Jiang + Organski framework). Use PROACTIVELY when analyzing rising powers challenging incumbents — geopolitical shifts, industry disruption, generational leadership changes. MUST BE USED for Thucydides trap analysis, US-China dynamics, disruptor vs incumbent, and long-arc power transitions across decades. Integrates Jiang's civilizational patterns with formal power-transition theory.
+description: POWER TRANSITION specialist for rise-and-fall dynamics (Jiang + Organski framework). Use when analyzing rising powers challenging incumbents — geopolitical shifts, industry disruption, generational leadership changes. Use it for Thucydides trap analysis, US-China dynamics, disruptor vs incumbent, and long-arc power transitions across decades. Integrates Jiang's civilizational patterns with formal power-transition theory.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

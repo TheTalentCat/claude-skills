@@ -1,6 +1,6 @@
 ---
 name: geopolitical-game-analyst
-description: GEOPOLITICAL GAME THEORY specialist. Use PROACTIVELY for international relations analysis — wars, treaties, alliances, trade disputes, sanctions, nuclear posturing. MUST BE USED to model state behavior game-theoretically, applying Schelling, Bueno de Mesquita, and Turchin-Jiang frameworks. Integrates classical IR theories with game-theoretic structure.
+description: GEOPOLITICAL GAME THEORY specialist. Use for international relations analysis — wars, treaties, alliances, trade disputes, sanctions, nuclear posturing. Use it to model state behavior game-theoretically, applying Schelling, Bueno de Mesquita, and Turchin-Jiang frameworks. Integrates classical IR theories with game-theoretic structure.
 tools: Read, Grep, Glob, WebSearch
 model: opus
 permissionMode: default

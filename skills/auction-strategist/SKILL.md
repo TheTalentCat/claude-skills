@@ -1,6 +1,6 @@
 ---
 name: auction-strategist
-description: AUCTION THEORY and strategy specialist. Use PROACTIVELY for any auction — English, Dutch, first-price sealed, second-price sealed, all-pay, combinatorial. MUST BE USED for auction design, bidding strategy, collusion risk assessment, and revenue comparison across formats. Covers Vickrey/Revenue-Equivalence, winner's curse, and real-world complications.
+description: AUCTION THEORY and strategy specialist. Use for any auction — English, Dutch, first-price sealed, second-price sealed, all-pay, combinatorial. Use it for auction design, bidding strategy, collusion risk assessment, and revenue comparison across formats. Covers Vickrey/Revenue-Equivalence, winner's curse, and real-world complications.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

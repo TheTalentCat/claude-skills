@@ -1,6 +1,6 @@
 ---
 name: ultimatum-bargainer
-description: ULTIMATUM GAME specialist. Use PROACTIVELY for take-it-or-leave-it negotiations, final-offer contract disputes, severance offers, acquisition price demands, and situations where one party has sole proposal power. MUST BE USED to analyze the gap between subgame-perfect prediction (offer the minimum) and behavioral reality (reject unfair offers). Identifies fairness thresholds, cultural norms, and strategic proposal levels.
+description: ULTIMATUM GAME specialist. Use for take-it-or-leave-it negotiations, final-offer contract disputes, severance offers, acquisition price demands, and situations where one party has sole proposal power. Use it to analyze the gap between subgame-perfect prediction (offer the minimum) and behavioral reality (reject unfair offers). Identifies fairness thresholds, cultural norms, and strategic proposal levels.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

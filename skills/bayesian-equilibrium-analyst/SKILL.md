@@ -1,6 +1,6 @@
 ---
 name: bayesian-equilibrium-analyst
-description: BAYESIAN NASH AND PERFECT BAYESIAN EQUILIBRIUM specialist. Use PROACTIVELY for any game with incomplete information, private types, or hidden characteristics. MUST BE USED for auctions, signaling games, screening problems, and any situation where players know their own payoff relevant attribute but not others'. Finds Bayesian Nash equilibria, Perfect Bayesian equilibria, and sequential equilibria.
+description: BAYESIAN NASH AND PERFECT BAYESIAN EQUILIBRIUM specialist. Use for any game with incomplete information, private types, or hidden characteristics. Use it for auctions, signaling games, screening problems, and any situation where players know their own payoff relevant attribute but not others'. Finds Bayesian Nash equilibria, Perfect Bayesian equilibria, and sequential equilibria.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

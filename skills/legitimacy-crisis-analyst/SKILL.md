@@ -1,6 +1,6 @@
 ---
 name: legitimacy-crisis-analyst
-description: LEGITIMACY CRISIS specialist (Jiang framework). Use PROACTIVELY when an authority (government, CEO, institution, leader) faces eroding acceptance of its right to rule. MUST BE USED for succession disputes, revolutions, corporate governance crises, and credibility collapses. Applies Jiang's analysis of David's apology, Roman civil wars, Caesar's cult-of-personality problem.
+description: LEGITIMACY CRISIS specialist (Jiang framework). Use when an authority (government, CEO, institution, leader) faces eroding acceptance of its right to rule. Use it for succession disputes, revolutions, corporate governance crises, and credibility collapses. Applies Jiang's analysis of David's apology, Roman civil wars, Caesar's cult-of-personality problem.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

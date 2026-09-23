@@ -1,6 +1,6 @@
 ---
 name: prisoners-dilemma-detector
-description: PRISONER'S DILEMMA pattern recognition specialist. Use PROACTIVELY whenever mutual cooperation Pareto-dominates mutual defection but individual defection dominates. MUST BE USED for arms races, price wars, advertising spending, doping in sports, climate negotiation, overfishing, tax evasion, and any situation with social dilemma structure. Identifies PD payoff structure (T > R > P > S with 2R > T+S), predicts the dilemma, and prescribes mitigations.
+description: PRISONER'S DILEMMA pattern recognition specialist. Use whenever mutual cooperation Pareto-dominates mutual defection but individual defection dominates. Use it for arms races, price wars, advertising spending, doping in sports, climate negotiation, overfishing, tax evasion, and any situation with social dilemma structure. Identifies PD payoff structure (T > R > P > S with 2R > T+S), predicts the dilemma, and prescribes mitigations.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

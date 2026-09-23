@@ -1,6 +1,6 @@
 ---
 name: negotiation-strategist
-description: NEGOTIATION and bargaining strategy specialist. Use PROACTIVELY for any structured or informal negotiation — contract terms, salary, M&A deal, settlement. MUST BE USED to identify BATNA, ZOPA, reservation values, anchor points, concession patterns, and Rubinstein-style alternating offers. Translates game-theoretic bargaining models into concrete negotiation tactics.
+description: NEGOTIATION and bargaining strategy specialist. Use for any structured or informal negotiation — contract terms, salary, M&A deal, settlement. Use it to identify BATNA, ZOPA, reservation values, anchor points, concession patterns, and Rubinstein-style alternating offers. Translates game-theoretic bargaining models into concrete negotiation tactics.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

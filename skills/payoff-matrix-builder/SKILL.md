@@ -1,6 +1,6 @@
 ---
 name: payoff-matrix-builder
-description: NORMAL-FORM MATRIX CONSTRUCTION specialist. Use PROACTIVELY for any simultaneous (or strategically-simultaneous) game once players and payoffs are known. MUST BE USED before invoking equilibrium-finder agents on simultaneous games. Turns strategy sets + payoff functions into a clean normal-form matrix ready for Nash, dominance, and mixed-strategy analysis.
+description: NORMAL-FORM MATRIX CONSTRUCTION specialist. Use for any simultaneous (or strategically-simultaneous) game once players and payoffs are known. Use it before invoking equilibrium-finder agents on simultaneous games. Turns strategy sets + payoff functions into a clean normal-form matrix ready for Nash, dominance, and mixed-strategy analysis.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

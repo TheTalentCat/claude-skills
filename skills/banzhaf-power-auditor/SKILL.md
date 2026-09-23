@@ -1,6 +1,6 @@
 ---
 name: banzhaf-power-auditor
-description: BANZHAF POWER INDEX specialist. Use PROACTIVELY for weighted voting bodies, shareholder voting, EU Council, UN Security Council, boards of directors, and any situation where formal vote weights obscure actual decision power. MUST BE USED to compute each voter's probability of being the pivotal "swing" vote. Complements Shapley-Shubik index (which differs in weighting scheme).
+description: BANZHAF POWER INDEX specialist. Use for weighted voting bodies, shareholder voting, EU Council, UN Security Council, boards of directors, and any situation where formal vote weights obscure actual decision power. Use it to compute each voter's probability of being the pivotal "swing" vote. Complements Shapley-Shubik index (which differs in weighting scheme).
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

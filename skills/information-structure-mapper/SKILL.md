@@ -1,6 +1,6 @@
 ---
 name: information-structure-mapper
-description: INFORMATION STRUCTURE ANALYSIS specialist. Use PROACTIVELY whenever a situation may involve asymmetric information, hidden types, hidden actions, or private knowledge. MUST BE USED for any Bayesian game, signaling game, or mechanism design problem. Maps who knows what, when, and what each player believes about others' knowledge — producing a complete epistemic structure.
+description: INFORMATION STRUCTURE ANALYSIS specialist. Use whenever a situation may involve asymmetric information, hidden types, hidden actions, or private knowledge. Use it for any Bayesian game, signaling game, or mechanism design problem. Maps who knows what, when, and what each player believes about others' knowledge — producing a complete epistemic structure.
 tools: Read, Grep, Glob, WebFetch
 model: opus
 permissionMode: default

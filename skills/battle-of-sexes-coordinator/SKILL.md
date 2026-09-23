@@ -1,6 +1,6 @@
 ---
 name: battle-of-sexes-coordinator
-description: BATTLE OF SEXES coordination-with-conflict specialist. Use PROACTIVELY when both players want to coordinate but disagree on the coordination point. MUST BE USED for standards wars (VHS vs Betamax, USB-C adoption), merger integration decisions, meeting locations, joint project direction, and any situation where being together matters more than where. Identifies BoS structure, compares focal points, and designs coordination mechanisms.
+description: BATTLE OF SEXES coordination-with-conflict specialist. Use when both players want to coordinate but disagree on the coordination point. Use it for standards wars (VHS vs Betamax, USB-C adoption), merger integration decisions, meeting locations, joint project direction, and any situation where being together matters more than where. Identifies BoS structure, compares focal points, and designs coordination mechanisms.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: extensive-form-modeler
-description: EXTENSIVE-FORM GAME TREE specialist. Use PROACTIVELY for sequential games, games with imperfect information, or multi-stage interactions. MUST BE USED before invoking backward-induction-solver or subgame-perfect-analyzer. Constructs a complete, properly labeled game tree with decision nodes, action labels, information sets, and terminal payoffs.
+description: EXTENSIVE-FORM GAME TREE specialist. Use for sequential games, games with imperfect information, or multi-stage interactions. Use it before invoking backward-induction-solver or subgame-perfect-analyzer. Constructs a complete, properly labeled game tree with decision nodes, action labels, information sets, and terminal payoffs.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

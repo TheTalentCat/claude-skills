@@ -1,6 +1,6 @@
 ---
 name: deterrence-theorist
-description: DETERRENCE THEORY specialist for threat-based prevention. Use PROACTIVELY for nuclear strategy, security policy, legal sanctions, corporate retaliation policies, and contract enforcement. MUST BE USED to design credible threats that prevent unwanted actions without having to execute them. Applies Schelling's strategy-of-conflict framework to deterrence design.
+description: DETERRENCE THEORY specialist for threat-based prevention. Use for nuclear strategy, security policy, legal sanctions, corporate retaliation policies, and contract enforcement. Use it to design credible threats that prevent unwanted actions without having to execute them. Applies Schelling's strategy-of-conflict framework to deterrence design.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

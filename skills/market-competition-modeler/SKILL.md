@@ -1,6 +1,6 @@
 ---
 name: market-competition-modeler
-description: OLIGOPOLY competition modeling specialist. Use PROACTIVELY for duopoly and oligopoly analysis — Cournot quantity competition, Bertrand price competition, Stackelberg leadership, differentiated products. MUST BE USED to model industry competition, compute market equilibria, and predict responses to cost shocks, entry, or capacity changes.
+description: OLIGOPOLY competition modeling specialist. Use for duopoly and oligopoly analysis — Cournot quantity competition, Bertrand price competition, Stackelberg leadership, differentiated products. Use it to model industry competition, compute market equilibria, and predict responses to cost shocks, entry, or capacity changes.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

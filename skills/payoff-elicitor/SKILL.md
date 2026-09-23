@@ -1,6 +1,6 @@
 ---
 name: payoff-elicitor
-description: PAYOFF QUANTIFICATION specialist. Use PROACTIVELY when a real-world situation needs to be turned into a game with numerical payoffs. MUST BE USED when the user describes stakes in qualitative terms ("we'd lose face", "they might retaliate", "I'd feel bad") and wants a tractable game. Extracts cardinal or ordinal payoffs by interrogating preferences, risk attitudes, time discounting, and social/reputational costs.
+description: PAYOFF QUANTIFICATION specialist. Use when a real-world situation needs to be turned into a game with numerical payoffs. Use it when the user describes stakes in qualitative terms ("we'd lose face", "they might retaliate", "I'd feel bad") and wants a tractable game. Extracts cardinal or ordinal payoffs by interrogating preferences, risk attitudes, time discounting, and social/reputational costs.
 tools: Read, WebFetch, WebSearch
 model: opus
 permissionMode: default

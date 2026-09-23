@@ -1,6 +1,6 @@
 ---
 name: core-stability-analyst
-description: COALITION CORE STABILITY specialist. Use PROACTIVELY for cooperative games to determine whether the grand coalition will hold together or fragment. MUST BE USED when assessing whether an alliance, joint venture, cartel, or treaty is stable against subgroup defection. Tests core non-emptiness (Bondareva-Shapley), computes the core when it exists, and identifies profitable sub-coalition defections when it does not.
+description: COALITION CORE STABILITY specialist. Use for cooperative games to determine whether the grand coalition will hold together or fragment. Use it when assessing whether an alliance, joint venture, cartel, or treaty is stable against subgroup defection. Tests core non-emptiness (Bondareva-Shapley), computes the core when it exists, and identifies profitable sub-coalition defections when it does not.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

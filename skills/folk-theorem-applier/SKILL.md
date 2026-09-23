@@ -1,6 +1,6 @@
 ---
 name: folk-theorem-applier
-description: FOLK THEOREM and infinitely-repeated games specialist. Use PROACTIVELY when players interact repeatedly with no fixed end and sufficient patience. MUST BE USED for ongoing business relationships, long-term alliances, sustained cartels, cooperative agreements without external enforcement, and any situation where "the shadow of the future" sustains cooperation. Computes minimum discount factor and identifies sustainable equilibria.
+description: FOLK THEOREM and infinitely-repeated games specialist. Use when players interact repeatedly with no fixed end and sufficient patience. Use it for ongoing business relationships, long-term alliances, sustained cartels, cooperative agreements without external enforcement, and any situation where "the shadow of the future" sustains cooperation. Computes minimum discount factor and identifies sustainable equilibria.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

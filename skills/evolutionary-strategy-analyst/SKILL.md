@@ -1,6 +1,6 @@
 ---
 name: evolutionary-strategy-analyst
-description: EVOLUTIONARY GAME THEORY specialist for population-level strategy dynamics. Use PROACTIVELY when analyzing how strategies spread in populations via imitation, learning, selection — biology, cultural evolution, market strategy adoption, norm emergence. MUST BE USED for replicator dynamics, ESS identification, and long-run strategy frequencies. Bridges individual rationality and population dynamics.
+description: EVOLUTIONARY GAME THEORY specialist for population-level strategy dynamics. Use when analyzing how strategies spread in populations via imitation, learning, selection — biology, cultural evolution, market strategy adoption, norm emergence. Use it for replicator dynamics, ESS identification, and long-run strategy frequencies. Bridges individual rationality and population dynamics.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

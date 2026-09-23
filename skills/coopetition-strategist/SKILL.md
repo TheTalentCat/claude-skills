@@ -1,6 +1,6 @@
 ---
 name: coopetition-strategist
-description: COOPETITION (simultaneous competition + cooperation) specialist. Use PROACTIVELY for cases where firms, nations, or individuals must both compete and cooperate with the same parties. MUST BE USED for standards bodies, joint ventures with competitors, research consortiums, industry associations, and supply-chain relationships. Applies Brandenburger-Nalebuff framework to identify value-creation vs value-capture moves.
+description: COOPETITION (simultaneous competition + cooperation) specialist. Use for cases where firms, nations, or individuals must both compete and cooperate with the same parties. Use it for standards bodies, joint ventures with competitors, research consortiums, industry associations, and supply-chain relationships. Applies Brandenburger-Nalebuff framework to identify value-creation vs value-capture moves.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: focal-point-identifier
-description: SCHELLING FOCAL POINT specialist. Use PROACTIVELY for coordination problems with multiple equilibria where players must converge without communication. MUST BE USED for meeting locations, joint project defaults, tie-breaking in coordination, standard emergence, and any situation requiring "we both picked X without discussing it." Identifies salient features that tip coordination to specific equilibria.
+description: SCHELLING FOCAL POINT specialist. Use for coordination problems with multiple equilibria where players must converge without communication. Use it for meeting locations, joint project defaults, tie-breaking in coordination, standard emergence, and any situation requiring "we both picked X without discussing it." Identifies salient features that tip coordination to specific equilibria.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

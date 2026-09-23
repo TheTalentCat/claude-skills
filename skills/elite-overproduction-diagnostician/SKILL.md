@@ -1,6 +1,6 @@
 ---
 name: elite-overproduction-diagnostician
-description: ELITE OVERPRODUCTION specialist (Turchin / Jiang framework). Use PROACTIVELY to diagnose social instability driven by too many ambitious elites competing for limited top positions. MUST BE USED for analyzing civil unrest, political polarization, corporate dysfunction, and institutional breakdown. Applies Peter Turchin's structural-demographic theory with Jiang's historical pattern recognition.
+description: ELITE OVERPRODUCTION specialist (Turchin / Jiang framework). Use to diagnose social instability driven by too many ambitious elites competing for limited top positions. Use it for analyzing civil unrest, political polarization, corporate dysfunction, and institutional breakdown. Applies Peter Turchin's structural-demographic theory with Jiang's historical pattern recognition.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: asymmetric-info-detective
-description: ASYMMETRIC INFORMATION specialist for adverse selection and moral hazard. Use PROACTIVELY for insurance markets, credit markets, labor contracting, principal-agent problems, used-car / lemon markets. MUST BE USED to diagnose whether the problem is hidden information (adverse selection) or hidden action (moral hazard), and to design contract solutions.
+description: ASYMMETRIC INFORMATION specialist for adverse selection and moral hazard. Use for insurance markets, credit markets, labor contracting, principal-agent problems, used-car / lemon markets. Use it to diagnose whether the problem is hidden information (adverse selection) or hidden action (moral hazard), and to design contract solutions.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

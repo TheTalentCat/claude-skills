@@ -1,6 +1,6 @@
 ---
 name: meta-game-designer
-description: META-GAME DESIGN specialist — changing the game itself. Use PROACTIVELY when the equilibrium of the current game is unfavorable and the structure can be changed. MUST BE USED when game-theoretic analysis shows bad outcomes are "rational" under current rules — rather than play better, change the game. Designs rule changes, new players, altered payoffs, shifted information, and structural moves.
+description: META-GAME DESIGN specialist — changing the game itself. Use when the equilibrium of the current game is unfavorable and the structure can be changed. Use it when game-theoretic analysis shows bad outcomes are "rational" under current rules — rather than play better, change the game. Designs rule changes, new players, altered payoffs, shifted information, and structural moves.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

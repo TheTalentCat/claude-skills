@@ -1,6 +1,6 @@
 ---
 name: quantal-response-modeler
-description: QUANTAL RESPONSE EQUILIBRIUM specialist for noisy rationality. Use PROACTIVELY when players make systematic but noisy strategic errors. MUST BE USED for predicting behavior in experimental conditions, modeling human strategic noise, calibrating strategies to imperfect opponents. Applies McKelvey-Palfrey QRE to compute equilibria with bounded precision.
+description: QUANTAL RESPONSE EQUILIBRIUM specialist for noisy rationality. Use when players make systematic but noisy strategic errors. Use it for predicting behavior in experimental conditions, modeling human strategic noise, calibrating strategies to imperfect opponents. Applies McKelvey-Palfrey QRE to compute equilibria with bounded precision.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

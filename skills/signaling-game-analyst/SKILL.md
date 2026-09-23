@@ -1,6 +1,6 @@
 ---
 name: signaling-game-analyst
-description: SIGNALING GAMES specialist. Use PROACTIVELY when one party has private information and chooses a costly action to reveal (or conceal) it. MUST BE USED for Spence-style job market signaling, brand advertising as quality signal, peacock-tail biology, warranty as quality signal, tattoos / club initiations as commitment signals, and any sender-receiver with private type. Identifies separating, pooling, and hybrid equilibria.
+description: SIGNALING GAMES specialist. Use when one party has private information and chooses a costly action to reveal (or conceal) it. Use it for Spence-style job market signaling, brand advertising as quality signal, peacock-tail biology, warranty as quality signal, tattoos / club initiations as commitment signals, and any sender-receiver with private type. Identifies separating, pooling, and hybrid equilibria.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: matching-pennies-randomizer
-description: PURE ZERO-SUM RANDOMIZATION specialist. Use PROACTIVELY for situations of pure opposition where predictability kills you — tax audits, penalty kicks, pitcher-batter, hide-and-seek, surprise inspections, security screening. MUST BE USED when one player's gain is exactly another's loss, no pure NE exists, and randomization is the only rational strategy. Computes minimax-optimal mixed strategies.
+description: PURE ZERO-SUM RANDOMIZATION specialist. Use for situations of pure opposition where predictability kills you — tax audits, penalty kicks, pitcher-batter, hide-and-seek, surprise inspections, security screening. Use it when one player's gain is exactly another's loss, no pure NE exists, and randomization is the only rational strategy. Computes minimax-optimal mixed strategies.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

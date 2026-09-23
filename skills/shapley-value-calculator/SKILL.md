@@ -1,6 +1,6 @@
 ---
 name: shapley-value-calculator
-description: SHAPLEY VALUE FAIR-DIVISION specialist. Use PROACTIVELY for any cooperative game requiring a fair allocation of the coalition's value. MUST BE USED for profit-sharing in joint ventures, cost allocation across business units, airport landing-fee splitting, voting power analysis, and machine-learning feature attribution (SHAP). Computes each player's Shapley value via marginal contribution averaging.
+description: SHAPLEY VALUE FAIR-DIVISION specialist. Use for any cooperative game requiring a fair allocation of the coalition's value. Use it for profit-sharing in joint ventures, cost allocation across business units, airport landing-fee splitting, voting power analysis, and machine-learning feature attribution (SHAP). Computes each player's Shapley value via marginal contribution averaging.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: first-mover-analyst
-description: FIRST-MOVER ADVANTAGE / DISADVANTAGE specialist. Use PROACTIVELY when considering whether to move first or wait. MUST BE USED for Stackelberg competition, market entry timing, preemptive capacity investment, public commitments, and any sequential-move scenario. Evaluates when first-move commitment helps vs when waiting for information is better.
+description: FIRST-MOVER ADVANTAGE / DISADVANTAGE specialist. Use when considering whether to move first or wait. Use it for Stackelberg competition, market entry timing, preemptive capacity investment, public commitments, and any sequential-move scenario. Evaluates when first-move commitment helps vs when waiting for information is better.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

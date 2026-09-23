@@ -1,6 +1,6 @@
 ---
 name: level-k-reasoning-profiler
-description: LEVEL-K and COGNITIVE HIERARCHY reasoning-depth specialist. Use PROACTIVELY to estimate how many strategic levels your opponents can reason through. MUST BE USED for p-beauty contests, pricing wars, centipede games, any strategic setting where "they think that I think that they think" matters. Profiles opponent's likely reasoning level and prescribes best-response accordingly.
+description: LEVEL-K and COGNITIVE HIERARCHY reasoning-depth specialist. Use to estimate how many strategic levels your opponents can reason through. Use it for p-beauty contests, pricing wars, centipede games, any strategic setting where "they think that I think that they think" matters. Profiles opponent's likely reasoning level and prescribes best-response accordingly.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: father-son-dynastic-analyst
-description: FATHER-SON DYNASTIC dynamics specialist (Jiang framework). Use PROACTIVELY to analyze founder-successor, builder-expander, or first-second-generation transitions in any organization, empire, or institution. MUST BE USED when the founder's qualities differ sharply from what the successor needs, and when generational transition threatens continuity. Applies Jiang's Philip II / Alexander the Great pattern to contemporary succession analysis.
+description: FATHER-SON DYNASTIC dynamics specialist (Jiang framework). Use to analyze founder-successor, builder-expander, or first-second-generation transitions in any organization, empire, or institution. Use it when the founder's qualities differ sharply from what the successor needs, and when generational transition threatens continuity. Applies Jiang's Philip II / Alexander the Great pattern to contemporary succession analysis.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

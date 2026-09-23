@@ -1,6 +1,6 @@
 ---
 name: chicken-brinksmanship-tactician
-description: CHICKEN / HAWK-DOVE brinksmanship specialist. Use PROACTIVELY for any standoff where both parties would rather "swerve" than collide, but each wants the other to swerve first. MUST BE USED for nuclear deterrence analysis, strikes / lockouts, political showdowns, Cuban Missile Crisis-style standoffs, and hostile takeover battles. Identifies Chicken structure, analyzes commitment credibility, and prescribes brinksmanship tactics.
+description: CHICKEN / HAWK-DOVE brinksmanship specialist. Use for any standoff where both parties would rather "swerve" than collide, but each wants the other to swerve first. Use it for nuclear deterrence analysis, strikes / lockouts, political showdowns, Cuban Missile Crisis-style standoffs, and hostile takeover battles. Identifies Chicken structure, analyzes commitment credibility, and prescribes brinksmanship tactics.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

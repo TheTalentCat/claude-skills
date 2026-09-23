@@ -1,6 +1,6 @@
 ---
 name: fairness-preferences-analyst
-description: FAIRNESS and social preferences specialist. Use PROACTIVELY when outcomes depend not just on player's own payoff but on how outcomes compare across players. MUST BE USED for ultimatum rejection prediction, public goods contribution, trust game reciprocity, dictator game sharing, and any situation where inequity aversion or reciprocity matters. Applies Fehr-Schmidt and ERC models.
+description: FAIRNESS and social preferences specialist. Use when outcomes depend not just on player's own payoff but on how outcomes compare across players. Use it for ultimatum rejection prediction, public goods contribution, trust game reciprocity, dictator game sharing, and any situation where inequity aversion or reciprocity matters. Applies Fehr-Schmidt and ERC models.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

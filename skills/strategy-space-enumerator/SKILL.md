@@ -1,6 +1,6 @@
 ---
 name: strategy-space-enumerator
-description: STRATEGY SPACE ENUMERATION specialist. Use PROACTIVELY when it's unclear what actions each player actually has, or when the obvious action list is suspiciously small. MUST BE USED before any equilibrium analysis to confirm the strategy space is correctly specified. Expands "what could I/they do?" into an exhaustive, de-duplicated, mutually-exclusive action set per player.
+description: STRATEGY SPACE ENUMERATION specialist. Use when it's unclear what actions each player actually has, or when the obvious action list is suspiciously small. Use it before any equilibrium analysis to confirm the strategy space is correctly specified. Expands "what could I/they do?" into an exhaustive, de-duplicated, mutually-exclusive action set per player.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

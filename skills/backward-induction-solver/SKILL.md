@@ -1,6 +1,6 @@
 ---
 name: backward-induction-solver
-description: BACKWARD INDUCTION specialist for finite sequential games of perfect information. Use PROACTIVELY as the primary solver for any finite-horizon extensive-form game with full observation. MUST BE USED for ultimatum games, Stackelberg models, finite centipedes, alternating-offers bargaining, and any situation solvable by "solve the end first, work backward." Returns SPE strategy + predicted play.
+description: BACKWARD INDUCTION specialist for finite sequential games of perfect information. Use as the primary solver for any finite-horizon extensive-form game with full observation. Use it for ultimatum games, Stackelberg models, finite centipedes, alternating-offers bargaining, and any situation solvable by "solve the end first, work backward." Returns SPE strategy + predicted play.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

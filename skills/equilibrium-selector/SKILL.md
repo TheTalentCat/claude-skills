@@ -1,6 +1,6 @@
 ---
 name: equilibrium-selector
-description: EQUILIBRIUM SELECTION specialist for games with multiple Nash equilibria. Use PROACTIVELY when nash-equilibrium-finder returns more than one equilibrium and you need to predict WHICH one emerges. MUST BE USED for coordination games, battle of the sexes, stag hunt, and situations where multiple equilibria coexist. Applies Harsanyi-Selten selection criteria, Schelling focal points, and empirical patterns.
+description: EQUILIBRIUM SELECTION specialist for games with multiple Nash equilibria. Use when nash-equilibrium-finder returns more than one equilibrium and you need to predict WHICH one emerges. Use it for coordination games, battle of the sexes, stag hunt, and situations where multiple equilibria coexist. Applies Harsanyi-Selten selection criteria, Schelling focal points, and empirical patterns.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

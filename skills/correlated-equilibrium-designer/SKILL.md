@@ -1,6 +1,6 @@
 ---
 name: correlated-equilibrium-designer
-description: CORRELATED EQUILIBRIUM specialist. Use PROACTIVELY when Nash equilibrium yields bad outcomes but a public signal could coordinate players on a Pareto-superior strategy profile. MUST BE USED for coordination problems with multiple equilibria, traffic-light-style situations, and any scenario where a mediator or common signal is available. Designs signal distributions that Pareto-improve on Nash.
+description: CORRELATED EQUILIBRIUM specialist. Use when Nash equilibrium yields bad outcomes but a public signal could coordinate players on a Pareto-superior strategy profile. Use it for coordination problems with multiple equilibria, traffic-light-style situations, and any scenario where a mediator or common signal is available. Designs signal distributions that Pareto-improve on Nash.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

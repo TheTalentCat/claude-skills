@@ -1,6 +1,6 @@
 ---
 name: s-tier-audit
-description: The S-tier audit framework — evidence-independent, cross-vendor adversarial review for money/data/auth/prod changes. Use PROACTIVELY when reviewing another agent's implementation packet, gating a merge on a revenue or customer-data path, or when Josh says "audit this like A09", "full audit", "pre-merge review", or "s-tier". Codified 2026-09-11 from the ContractorRoster A09 role-swap experiment (Claude auditor × GPT Astra handler).
+description: The S-tier audit framework — evidence-independent, cross-vendor adversarial review for money/data/auth/prod changes. Use when reviewing another agent's implementation packet, gating a merge on a revenue or customer-data path, or when Josh says "audit this like A09", "full audit", "pre-merge review", or "s-tier". Codified 2026-09-11 from the ContractorRoster A09 role-swap experiment (Claude auditor × GPT Astra handler).
 ---
 
 # /s-tier-audit — the framework
@@ -128,3 +128,16 @@ ones marked (Josh) need operator action, not agent action:
   per-record line), not aggregate math, and if only the aggregate exists, say
   "not attributable" — never pin it to the item you happen to be looking at.
   (Marie Outscraper probe, 2026-09-16. Third instance this engagement.)
+
+<!-- anti-pattern added 2026-09-21 -->
+- Accepting a resource-BOUND claim from a comment/config without adversarially
+  testing the bound at saturation. A rate limiter's comment said "LRU-bounded to
+  ~1000 IPs"; I filed it as a benign [note] and moved on. The code actually grew
+  UNBOUNDED under rotating identities (the prune only removed EXPIRED buckets, then
+  allocated a new one anyway), and a single blocked client charged the shared global
+  budget and could 429 everyone. The handler caught both with a 2,000-identity
+  reproduction; my STRIDE/DoS pass did not. For any "bounded / capped / limited /
+  throttled" claim on a security control, construct the adversarial edge yourself
+  (rotation, all-live saturation, shared-key contention) and run it — a passing
+  happy-path test and a reassuring comment prove nothing about the bound under
+  attack. (Public license lookup rate limiter, 2026-09-21.)

@@ -1,6 +1,6 @@
 ---
 name: poor-conquers-rich-analyst
-description: POOR-CONQUERS-RICH pattern specialist (Jiang framework). Use PROACTIVELY for asymmetric competitions where the materially-weaker side defeats the materially-stronger. MUST BE USED for startup-vs-incumbent, Macedon-vs-Greek-cities, Mongol-vs-settled-empires, North-Korea-vs-South-Korea thought experiment, and any contest where hunger, unity, and obedience may beat wealth and technology.
+description: POOR-CONQUERS-RICH pattern specialist (Jiang framework). Use for asymmetric competitions where the materially-weaker side defeats the materially-stronger. Use it for startup-vs-incumbent, Macedon-vs-Greek-cities, Mongol-vs-settled-empires, North-Korea-vs-South-Korea thought experiment, and any contest where hunger, unity, and obedience may beat wealth and technology.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

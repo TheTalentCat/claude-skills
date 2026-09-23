@@ -1,6 +1,6 @@
 ---
 name: vcg-architect
-description: VICKREY-CLARKE-GROVES mechanism specialist. Use PROACTIVELY for multi-item or multi-agent allocation where efficiency matters and truthful reporting must be dominant. MUST BE USED for combinatorial auctions, public project allocation, task assignment, and any setting requiring dominant-strategy IC + efficient allocation. Designs VCG mechanism and flags its limitations.
+description: VICKREY-CLARKE-GROVES mechanism specialist. Use for multi-item or multi-agent allocation where efficiency matters and truthful reporting must be dominant. Use it for combinatorial auctions, public project allocation, task assignment, and any setting requiring dominant-strategy IC + efficient allocation. Designs VCG mechanism and flags its limitations.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: mechanism-designer
-description: GENERAL MECHANISM DESIGN specialist. Use PROACTIVELY when the question is not "what will players do?" but "what rules will make players do what we want?" MUST BE USED for institutional design, platform rules, voting systems, resource allocation, tournament structure, incentive schemes, and any situation where rules can be engineered. Applies the revelation principle to reduce arbitrary mechanisms to direct truthful ones.
+description: GENERAL MECHANISM DESIGN specialist. Use when the question is not "what will players do?" but "what rules will make players do what we want?" Use it for institutional design, platform rules, voting systems, resource allocation, tournament structure, incentive schemes, and any situation where rules can be engineered. Applies the revelation principle to reduce arbitrary mechanisms to direct truthful ones.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: stag-hunt-analyst
-description: STAG HUNT pattern recognition specialist. Use PROACTIVELY when cooperation yields the largest payoff but requires mutual trust, while defection provides a safe but smaller guaranteed payoff. MUST BE USED for startup co-founders, alliance trust-building, technology standards adoption, team commitment, and any situation with the "risk vs payoff dominance" tradeoff. Identifies Stag Hunt structure, analyzes the trust problem, and prescribes trust-building interventions.
+description: STAG HUNT pattern recognition specialist. Use when cooperation yields the largest payoff but requires mutual trust, while defection provides a safe but smaller guaranteed payoff. Use it for startup co-founders, alliance trust-building, technology standards adoption, team commitment, and any situation with the "risk vs payoff dominance" tradeoff. Identifies Stag Hunt structure, analyzes the trust problem, and prescribes trust-building interventions.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

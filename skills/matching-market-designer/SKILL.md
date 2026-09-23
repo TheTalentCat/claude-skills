@@ -1,6 +1,6 @@
 ---
 name: matching-market-designer
-description: STABLE MATCHING and market design specialist. Use PROACTIVELY for two-sided matching problems (workers-jobs, students-schools, doctors-hospitals, kidney exchange, dating apps). MUST BE USED for Gale-Shapley deferred acceptance, stable-matching analysis, strategy-proofness audits, and real-world market clearinghouse design. Channels Al Roth's market design principles.
+description: STABLE MATCHING and market design specialist. Use for two-sided matching problems (workers-jobs, students-schools, doctors-hospitals, kidney exchange, dating apps). Use it for Gale-Shapley deferred acceptance, stable-matching analysis, strategy-proofness audits, and real-world market clearinghouse design. Channels Al Roth's market design principles.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

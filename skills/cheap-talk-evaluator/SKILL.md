@@ -1,6 +1,6 @@
 ---
 name: cheap-talk-evaluator
-description: CHEAP TALK and costless communication specialist. Use PROACTIVELY to determine whether non-binding, costless pre-play talk will transmit information. MUST BE USED for press conferences, public announcements, negotiation openers, sales pitches, and any communication that carries no enforcement. Applies Crawford-Sobel model to identify information transmission limits based on interest alignment.
+description: CHEAP TALK and costless communication specialist. Use to determine whether non-binding, costless pre-play talk will transmit information. Use it for press conferences, public announcements, negotiation openers, sales pitches, and any communication that carries no enforcement. Applies Crawford-Sobel model to identify information transmission limits based on interest alignment.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

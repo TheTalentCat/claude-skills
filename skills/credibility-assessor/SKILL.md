@@ -1,6 +1,6 @@
 ---
 name: credibility-assessor
-description: CREDIBILITY assessment specialist for threats, promises, commitments, and claims. Use PROACTIVELY to evaluate whether opponent's threat/promise is backed by interest/capability or is cheap talk. MUST BE USED before reacting to any strategic announcement — deterrent threats, commitment to prices, promised rewards, exit threats. Evaluates credibility via incentive compatibility, capability, reputation, and binding mechanism.
+description: CREDIBILITY assessment specialist for threats, promises, commitments, and claims. Use to evaluate whether opponent's threat/promise is backed by interest/capability or is cheap talk. Use it before reacting to any strategic announcement — deterrent threats, commitment to prices, promised rewards, exit threats. Evaluates credibility via incentive compatibility, capability, reputation, and binding mechanism.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

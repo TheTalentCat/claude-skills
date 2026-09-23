@@ -1,6 +1,6 @@
 ---
 name: counterfactual-simulator
-description: COUNTERFACTUAL analysis specialist. Use PROACTIVELY to simulate "what if X had played differently" in past or present strategic situations. MUST BE USED for learning from past games, stress-testing current strategy, exploring decision tree alternatives. Traces alternate-play consequences through the game tree to reveal robustness / fragility of outcomes.
+description: COUNTERFACTUAL analysis specialist. Use to simulate "what if X had played differently" in past or present strategic situations. Use it for learning from past games, stress-testing current strategy, exploring decision tree alternatives. Traces alternate-play consequences through the game tree to reveal robustness / fragility of outcomes.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

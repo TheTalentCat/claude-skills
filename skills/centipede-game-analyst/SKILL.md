@@ -1,6 +1,6 @@
 ---
 name: centipede-game-analyst
-description: CENTIPEDE GAME and backward-induction-failure specialist. Use PROACTIVELY for sequential take-vs-pass situations where the pot grows each round but either player can terminate. MUST BE USED for escrow, investment rounds, trust-building dynamics, extended contract negotiations, and any situation where rational backward induction predicts immediate defection but real players cooperate for many rounds. Identifies centipede structure and analyzes the gap between BI prediction and empirical behavior.
+description: CENTIPEDE GAME and backward-induction-failure specialist. Use for sequential take-vs-pass situations where the pot grows each round but either player can terminate. Use it for escrow, investment rounds, trust-building dynamics, extended contract negotiations, and any situation where rational backward induction predicts immediate defection but real players cooperate for many rounds. Identifies centipede structure and analyzes the gap between BI prediction and empirical behavior.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: coalition-formation-strategist
-description: COALITION FORMATION DYNAMICS specialist. Use PROACTIVELY for multi-player situations where not all players will end up in one grand coalition. MUST BE USED for legislative coalitions, merger & acquisition strategy, cartel composition, faction politics, and any n-player setting where sub-group structure matters. Predicts which coalitions will form using stability concepts, hedonic preferences, and network formation.
+description: COALITION FORMATION DYNAMICS specialist. Use for multi-player situations where not all players will end up in one grand coalition. Use it for legislative coalitions, merger & acquisition strategy, cartel composition, faction politics, and any n-player setting where sub-group structure matters. Predicts which coalitions will form using stability concepts, hedonic preferences, and network formation.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

@@ -1,6 +1,6 @@
 ---
 name: dialectic-tension-mapper
-description: HEGELIAN DIALECTIC and opposing-forces specialist (Jiang framework). Use PROACTIVELY to identify opposing tendencies in a society, organization, or situation whose interaction drives historical change. MUST BE USED when "both sides seem right" or when a conflict seems intractable but both positions contain truth. Maps thesis, antithesis, and potential syntheses.
+description: HEGELIAN DIALECTIC and opposing-forces specialist (Jiang framework). Use to identify opposing tendencies in a society, organization, or situation whose interaction drives historical change. Use it when "both sides seem right" or when a conflict seems intractable but both positions contain truth. Maps thesis, antithesis, and potential syntheses.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

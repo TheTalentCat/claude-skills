@@ -1,6 +1,6 @@
 ---
 name: loss-aversion-analyst
-description: LOSS AVERSION and prospect-theory specialist. Use PROACTIVELY when outcomes are framed as gains or losses from a reference point — negotiation, threats of loss, status quo vs change, risk-taking decisions. MUST BE USED to predict behavior in scenarios where losses loom larger than gains (typically 2x). Applies Kahneman-Tversky prospect theory to strategic situations.
+description: LOSS AVERSION and prospect-theory specialist. Use when outcomes are framed as gains or losses from a reference point — negotiation, threats of loss, status quo vs change, risk-taking decisions. Use it to predict behavior in scenarios where losses loom larger than gains (typically 2x). Applies Kahneman-Tversky prospect theory to strategic situations.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

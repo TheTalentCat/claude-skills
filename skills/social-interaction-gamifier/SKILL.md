@@ -1,6 +1,6 @@
 ---
 name: social-interaction-gamifier
-description: EVERYDAY SOCIAL INTERACTION game theory specialist. Use PROACTIVELY for personal, romantic, family, friendship, and workplace dynamics analyzed through game theory. MUST BE USED for dating, marriage, family conflict, office politics, friendship reciprocity, and any informal interaction with strategic structure. Applies repeated-game, reciprocity, and signaling frameworks to everyday life.
+description: EVERYDAY SOCIAL INTERACTION game theory specialist. Use for personal, romantic, family, friendship, and workplace dynamics analyzed through game theory. Use it for dating, marriage, family conflict, office politics, friendship reciprocity, and any informal interaction with strategic structure. Applies repeated-game, reciprocity, and signaling frameworks to everyday life.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

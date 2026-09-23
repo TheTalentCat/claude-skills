@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: Cut AI tells from any writing. Must always apply.
+description: Cut AI tells from prose meant for readers — marketing and website copy, posts, emails, articles, and docs. Use when writing or editing that kind of prose. Not for code, commit messages, logs, or audit and verdict files, where precision beats style.
 ---
 
 # Unslop

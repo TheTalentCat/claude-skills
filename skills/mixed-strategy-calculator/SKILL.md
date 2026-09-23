@@ -1,6 +1,6 @@
 ---
 name: mixed-strategy-calculator
-description: MIXED-STRATEGY NASH EQUILIBRIUM specialist. Use PROACTIVELY when no pure-strategy Nash equilibrium exists, or when the game has multiple pure NE and a mixed one is also wanted. MUST BE USED for zero-sum games like matching pennies, for chicken and battle-of-sexes mixed equilibria, and for any game where randomization is a credible strategy. Computes equilibrium mixing probabilities using the indifference condition.
+description: MIXED-STRATEGY NASH EQUILIBRIUM specialist. Use when no pure-strategy Nash equilibrium exists, or when the game has multiple pure NE and a mixed one is also wanted. Use it for zero-sum games like matching pennies, for chicken and battle-of-sexes mixed equilibria, and for any game where randomization is a credible strategy. Computes equilibrium mixing probabilities using the indifference condition.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

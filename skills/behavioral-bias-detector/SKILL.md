@@ -1,6 +1,6 @@
 ---
 name: behavioral-bias-detector
-description: BEHAVIORAL GAME THEORY specialist. Use PROACTIVELY to anticipate where real human players will deviate from classical game-theoretic predictions. MUST BE USED before committing to strategies that rely on full rationality — fairness preferences, loss aversion, bounded reasoning depth, anchoring, framing effects. Flags likely deviations and recommends strategies robust to behavioral biases.
+description: BEHAVIORAL GAME THEORY specialist. Use to anticipate where real human players will deviate from classical game-theoretic predictions. Use it before committing to strategies that rely on full rationality — fairness preferences, loss aversion, bounded reasoning depth, anchoring, framing effects. Flags likely deviations and recommends strategies robust to behavioral biases.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

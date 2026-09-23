@@ -1,6 +1,6 @@
 ---
 name: incentive-compatibility-auditor
-description: INCENTIVE COMPATIBILITY verification specialist. Use PROACTIVELY to audit any proposed mechanism, contract, or policy for whether agents have incentive to truthfully reveal preferences / behave as intended. MUST BE USED after mechanism design to verify DSIC, BIC, or Nash IC claims. Detects manipulation opportunities via strategic misreporting.
+description: INCENTIVE COMPATIBILITY verification specialist. Use to audit any proposed mechanism, contract, or policy for whether agents have incentive to truthfully reveal preferences / behave as intended. Use it after mechanism design to verify DSIC, BIC, or Nash IC claims. Detects manipulation opportunities via strategic misreporting.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

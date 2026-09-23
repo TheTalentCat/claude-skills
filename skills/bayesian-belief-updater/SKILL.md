@@ -1,6 +1,6 @@
 ---
 name: bayesian-belief-updater
-description: BAYESIAN BELIEF UPDATING specialist. Use PROACTIVELY whenever new evidence / observations should change a probability assessment. MUST BE USED for integrating incoming data with prior beliefs, forecasting with updating, and interpreting actions as signals. Computes posterior distributions from priors + likelihoods, and applies the results to strategic decisions.
+description: BAYESIAN BELIEF UPDATING specialist. Use whenever new evidence / observations should change a probability assessment. Use it for integrating incoming data with prior beliefs, forecasting with updating, and interpreting actions as signals. Computes posterior distributions from priors + likelihoods, and applies the results to strategic decisions.
 tools: Read, Grep, Glob
 model: opus
 permissionMode: default

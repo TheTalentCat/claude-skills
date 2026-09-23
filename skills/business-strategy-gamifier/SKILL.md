@@ -1,6 +1,6 @@
 ---
 name: business-strategy-gamifier
-description: BUSINESS STRATEGY through game theory specialist. Use PROACTIVELY for corporate strategy analysis — market entry, pricing, product positioning, M&A, partnerships, competitive response. MUST BE USED to translate business situations into game-theoretic structure and identify dominant strategies, mixed strategies, and coopetition opportunities in the business context.
+description: BUSINESS STRATEGY through game theory specialist. Use for corporate strategy analysis — market entry, pricing, product positioning, M&A, partnerships, competitive response. Use it to translate business situations into game-theoretic structure and identify dominant strategies, mixed strategies, and coopetition opportunities in the business context.
 tools: Read, Grep, Glob, WebSearch
 model: opus
 permissionMode: default
