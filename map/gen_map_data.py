@@ -2,14 +2,19 @@
 import json, os, re, subprocess, sys
 
 SKILLS_DIR = os.path.expanduser("~/.claude/skills")
+# project-scoped skill sets: they only work when Claude runs inside that project folder
+EXTRA_SKILL_DIRS = ["E:/image-blaster/.claude/skills"]
 REF_HTML = os.path.expanduser("~/claude-skills-reference.html")
 REPO = os.path.expanduser("~/claude-skills")
 OUT = os.path.expanduser("~/skills-map-data.json")
 
 # ---- 1. collect installed skills + descriptions ----
 skills = {}
-for name in sorted(os.listdir(SKILLS_DIR)):
-    p = os.path.join(SKILLS_DIR, name, "SKILL.md")
+skill_paths = [(n, os.path.join(SKILLS_DIR, n, "SKILL.md")) for n in sorted(os.listdir(SKILLS_DIR))]
+for d in EXTRA_SKILL_DIRS:
+    if os.path.isdir(d):
+        skill_paths += [(n, os.path.join(d, n, "SKILL.md")) for n in sorted(os.listdir(d))]
+for name, p in skill_paths:
     if not os.path.isfile(p):
         continue
     try:
