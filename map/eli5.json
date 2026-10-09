@@ -297,6 +297,7 @@
 "rest-api-design-guide": "Designs well-structured web APIs following established best practices.",
 "retro": "Runs a weekly look-back meeting on how the engineering work went.",
 "revenue-equivalence-analyst": "Compares different auction styles to find out which one actually earns the seller the most money.",
+"reverse-engineer-anything": "Figures out how any app or program works under the hood, even without its source code.",
 "review": "Reviews a pull request one last time before it's merged.",
 "revops": "Sets up how leads flow and get handed off between marketing and sales.",
 "s-tier-audit": "Runs the full evidence-independent audit playbook when one agent reviews another agent's work on money or customer-data code.",
